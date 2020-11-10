@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<script src="{{ url_for('static', filename='js/collab.js') }}"></script>
+
+<h1 class="w3-center">Collaborators</h1>
+<br>
+
+{% if session.logged_in %}
+<a href="{{ url_for("collab_add") }}" class="w3-button w3-large w3-blue">Add</a>
+<a href="{{ url_for("collab_delete") }}" class="w3-button w3-large w3-red">Delete</a>
+<br/><br/>
+{% endif %}
+
+<table id="collab" class="display compact w3-medium cell-border"  width="100%">
+        <thead>
+            <tr class="w3-grey">
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Title</th>
+                <th>Role Expertise</th>
+                <th>Country</th>
+                <th>Type</th>
+                <th>Affiliation</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for x in collabs %}
+            <tr>
+                <td>{{ x.name1 }}</td>
+                <td>{{ x.name2 }}</td>
+                <td>{{ x.title }}</td>
+                <td>{{ x.role_expertise }}</td>
+                <td>{{ x.country }}</td>
+                <td>{{ x.type }}</td>
+                <td>{{ x.affiliation }}</td>
+                <td>{{ x.email }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+</table>
+
+
+{% endblock %}

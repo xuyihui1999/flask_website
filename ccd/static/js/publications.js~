@@ -1,0 +1,8 @@
+$(document).ready(function() {
+    $('#publications').DataTable( {
+        "scrollX": true,
+        "scrollY": 500,
+	"pageLength": 50,
+    } );
+} );
+

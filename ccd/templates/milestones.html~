@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+
+<script src="{{ url_for('static', filename='js/milestones.js') }}"></script>
+
+<h1 class="w3-center">Milestones</h1>
+<br>
+
+{% if session.logged_in %}
+<a href="{{ url_for("milestone_add") }}" class="w3-button w3-large w3-blue">Add</a>
+<a href="{{ url_for("milestone_delete") }}" class="w3-button w3-large w3-red">Delete</a>
+<a href="{{ url_for("milestone_edit") }}" class="w3-button w3-large w3-green">Edit</a>
+<br/><br/>
+{% endif %}
+
+<table id="milestones" class="display compact w3-medium cell-border"  width="100%">
+        <thead>
+            <tr class="w3-grey">
+		<th>ID</th>
+		<th>Start Date</th>
+		<th>End Date</th>
+		<th>Module</th>
+		<th>Short Title</th>
+		<th>Milestone</th>
+		<th>Progress</th>
+		<th>Activity</th>
+		<th>Assigned To</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for x in milestones %}
+            <tr>
+		<td>{{ x.milestone_id }}</td>
+		<td>{{ x.start_date }}</td>
+		<td>{{ x.end_date }}</td>
+		<td>{{ x.module }}</td>
+		<td>{{ x.short_title }}</td>
+		<td>{{ x.milestone }}</td>
+		<td>{{ x.progress }}</td>
+		<td>{{ x.activity }}</td>
+		<td>{{ x.assigned_to }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+</table>
+
+{% endblock %}
