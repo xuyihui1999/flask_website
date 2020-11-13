@@ -159,6 +159,7 @@ def budget_delete():
 
 @app.route('/cost_categories',methods=['GET','POST'])
 def cost_categories():
+   
    cost_categories = Cost_Categories.query.all()
    return render_template('cost_categories.html',cost_categories=cost_categories)
 
