@@ -17,45 +17,24 @@
 </head>
 
 <style>
-body { font-family: 'Roboto Condensed', sans-serif; font-size:18px;position: relative; }
+body { font-family: 'Roboto Condensed', sans-serif; font-size:18px }
 h1 { font-family: 'Oswald', sans-serif; font-size:30px; }
-mark { background-color:#fff; color:black; }
-.footer { 
-    text-align: center;
-    font-family: 'Roboto Condensed', sans-serif;
-    background-color: #fff;
-    position: absolute; 
-    left: 0 ; right: 0; bottom: 0; 
-    height:[footer-height];
-    padding-top: 1px;
-}
-
+mark { background-color:#e5f049; color:black; }
+.navbg { background-image: url("../static/images/barley.JPG"); }
 </style>
 
-<body style="background-color:#ffffff">
+<body style="background-color:#ecf2b1">
 <!-- Navbar (sit on top) -->
-
 <div class="w3-top">
-  <div class="w3-bar w3-card-2 w3-white">
-
-
-    <div>
-        <a href="{{ url_for("main") }}">
-        <img alt="4dwheat_logo" src="{{url_for('static',filename='images/4dwheat_logo.png')}}" class="responsive" style="height:75px;width:280px;display: inline;"/>
-        </a> 
-        <h style="text-align: center;padding-left: 20px;">A GENOMIC PLATFORM TO MAXIMIZE BREEDING VALUE OF GENETIC RESOURCES</h>
+  <div class="w3-bar w3-card-2 w3-lime">
+    <div class="w3-row w3-center">
+        <h1 style="font-size:45px; letter-spacing:10px;">CEREAL CROP DIVERSITY</h1>
+        <h1 style="font-size:15px">GRDI FUNDED RESEARCH PROJECT #1989</h1>
     </div>
-
-    
-
-
-    
-
-    
-    <div class="w3-row w3-white">     
+    <div class="w3-row w3-lime">     
     <a href="{{ url_for("main") }}" class="w3-bar-item w3-button">Home</a>  
     <div class="w3-dropdown-hover">
-        <button class="w3-button w3-white">RDCs/People</button>
+        <button class="w3-button w3-lime">RDCs/People</button>
         <div class="w3-dropdown-content w3-bar-block w3-card-3">
           <a href="{{ url_for("rdc") }}" class="w3-bar-item w3-button">RDCs</a>
           <a href="{{ url_for("collab") }}" class="w3-bar-item w3-button">Collaborators</a>
@@ -64,14 +43,14 @@ mark { background-color:#fff; color:black; }
         </div>
       </div>
       <div class="w3-dropdown-hover">
-        <button class="w3-button w3-white"> Milestones/Objectives/Progress</button>
+        <button class="w3-button w3-lime"> Milestones/Objectives/Progress</button>
         <div class="w3-dropdown-content w3-bar-block w3-card-3">
           <a href="{{ url_for("milestones") }}" class="w3-bar-item w3-button">Milestones</a>
           <a href="{{ url_for("objectives") }}" class="w3-bar-item w3-button">Objectives</a>
         </div>
       </div>
       <div class="w3-dropdown-hover">
-        <button class="w3-button w3-white"> Budget/Cost </button>
+        <button class="w3-button w3-lime"> Budget/Cost </button>
         <div class="w3-dropdown-content w3-bar-block w3-card-3">
           <a href="{{ url_for("budget") }}" class="w3-bar-item w3-button">Budget</a>
           <a href="{{ url_for("cost_categories") }}" class="w3-bar-item w3-button">Cost Categories</a>
@@ -79,7 +58,7 @@ mark { background-color:#fff; color:black; }
         </div>
       </div>
       <div class="w3-dropdown-hover">
-        <button class="w3-button w3-white"> Publications/Conferences </button>
+        <button class="w3-button w3-lime"> Publications/Conferences </button>
         <div class="w3-dropdown-content w3-bar-block w3-card-3">
           <a href="{{ url_for("publications") }}" class="w3-bar-item w3-button">Publications</a>
           <a href="{{ url_for("conferences") }}" class="w3-bar-item w3-button">Conferences</a>
@@ -87,7 +66,7 @@ mark { background-color:#fff; color:black; }
       </div>
       <a href="{{ url_for("tools") }}" class="w3-bar-item w3-button">Tools</a>
       <div class="w3-dropdown-hover">
-        <button class="w3-button w3-white"> Databases </button>
+        <button class="w3-button w3-lime"> Databases </button>
         <div class="w3-dropdown-content w3-bar-block w3-card-3">
           <a href="http://10.113.72.170/ccd_genome_browsers" class="w3-bar-item w3-button">Cereal Genome Browser</a>
           <a href="#" class="w3-bar-item w3-button">Cereal Diversity Database</a>
@@ -113,13 +92,15 @@ mark { background-color:#fff; color:black; }
 </div>
 
 <!-- Footer -->
-<footer>
-        <div class="footer">
-          <a href="http://intranet.agr.gc.ca/agrisource/eng?id=1287261736402">
-          <img src="{{ url_for ('static', filename='images/aafc.png') }}" style="width:25%">
-          </a>
-        </div>
-      
-    </footer>    
+<div class="w3-bottom">
+  <div class="w3-bar w3-card-2 w3-lime">
+    <div class="w3-center w3-padding-16">
+      <a href="http://intranet.agr.gc.ca/agrisource/eng?id=1287261736402">
+        <img src="{{ url_for ('static', filename='images/aafc.png') }}" style="width:25%">
+      </a>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
