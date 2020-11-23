@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block BCbutton %} style = "background-color: #cbf59a;" {% endblock %}
+{% block content %}
+
+<script src="{{ url_for('static', filename='js/budget.js') }}"></script>
+
+<h1 class="w3-center">Budget</h1>
+<br>
+
+{% if session.logged_in %}
+<a href="{{ url_for("budget_add") }}" class="w3-button w3-large w3-blue">Add</a>
+<a href="{{ url_for("budget_delete") }}" class="w3-button w3-large w3-red">Delete</a>
+<br/><br/>
+{% endif %}
+
+<table id="budget" class="display compact w3-medium cell-border"  width="100%">
+        <thead>
+            <tr class="w3-grey">
+                <th>Year 1</th>
+                <th>Year 2</th>
+                <th>Category</th>
+                <th>Assigned To</th>
+                <th>Comments</th>
+                <th>Subcategory</th>
+                <th>Cost Type</th>
+                <th>Centre</th>
+                <th>Original Proposal</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for x in budget %}
+            <tr>
+                <td>{{ x.year1 }}</td>
+                <td>{{ x.year2 }}</td>
+                <td>{{ x.category }}</td>
+                <td>{{ x.assigned_to }}</td>
+                <td>{{ x.comments }}</td>
+                <td>{{ x.subcategory }}</td>
+                <td>{{ x.cost_type }}</td>
+                <td>{{ x.centre }}</td>
+                <td>{{ x.orig_proposal }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+</table>
+
+{% endblock %}
