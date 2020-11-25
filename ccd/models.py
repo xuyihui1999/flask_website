@@ -92,6 +92,30 @@ class Collaborators(db.Model):
                 return '<Colaborators %r>' % self.colaborators
 
 
+class ROC_members(db.Model):
+
+        
+        name = db.Column(db.String(100))
+        title = db.Column(db.String(100))
+        affiliation = db.Column(db.String(1000))
+        email = db.Column(db.String(100), primary_key=True)
+        web_link = db.Column(db.String(1000))
+        def __repr__(self):
+                return '<ROC_members %r>' % self.roc_members
+
+
+
+class Research_Team(db.Model):
+
+        name = db.Column(db.String(100),primary_key=True)
+        title = db.Column(db.String(100))
+        role = db.Column(db.String(100))
+        description_of_responsibilities = db.Column(db.String(1000))
+        affiliation = db.Column(db.String(1000))
+        email = db.Column(db.String(100))
+        website = db.Column(db.String(1000))
+        def __repr__(self):
+                return '<Research_Team %r>' % self.research_team
 '''
 This model is for the conferences table. 
 

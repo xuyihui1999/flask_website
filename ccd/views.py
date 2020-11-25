@@ -371,6 +371,16 @@ def collab():
    collabs = Collaborators.query.all()
    return render_template('collab.html',collabs=collabs)
 
+@app.route('/roc_member',methods=['GET','POST'])
+def roc_member():
+   roc_mem = ROC_members.query.all()
+   return render_template('roc_member.html',roc_mem=roc_mem)
+
+@app.route('/research_team',methods=['GET','POST'])
+def research_team():
+   research = Research_Team.query.all()
+   return render_template('research_team.html',research=research)
+
 @app.route('/collab_add',methods=['GET','POST'])
 def collab_add():
     if not session.get('logged_in') :
@@ -389,6 +399,76 @@ def collab_add():
           return redirect(url_for('collab'))
     return render_template('collab_add.html',form=form)
 
+
+@app.route('/roc_add',methods=['GET','POST'])
+def roc_add():
+    if not session.get('logged_in') :
+      return redirect(url_for('login')) #user is not logged in sends user to login screen Kody 2018-01-08
+    form = ROC_memberAddForm()
+    if request.method == 'POST':
+      if form.validate_on_submit():
+        new = ROC_members()
+        form.populate_obj(new)
+        # Check if the member already exists in the db
+        exists = ROC_members.query.filter_by(email=new.email).first()
+        # If it does not exist, add it to the db
+        if exists is None:
+          db.session.add(new)
+          db.session.commit()
+          return redirect(url_for('roc_member'))
+    return render_template('roc_add.html',form=form)
+
+@app.route('/research_team_add',methods=['GET','POST'])
+def research_team_add():
+    if not session.get('logged_in') :
+      return redirect(url_for('login')) #user is not logged in sends user to login screen Kody 2018-01-08
+    form = Research_TeamAddForm()
+    if request.method == 'POST':
+      if form.validate_on_submit():
+        new = Research_Team()
+        form.populate_obj(new)
+        # Check if the member already exists in the db
+        exists = Research_Team.query.filter_by(name=new.name).first()
+        # If it does not exist, add it to the db
+        if exists is None:
+          db.session.add(new)
+          db.session.commit()
+          return redirect(url_for('research_team'))
+    return render_template('research_team_add.html',form=form)
+
+@app.route('/roc_delete',methods=['GET','POST'])
+def roc_delete():
+    if not session.get('logged_in') :
+      return redirect(url_for('login')) #user is not logged in sends user to login screen Kody 2018-01-08
+    roc_member = ROC_members.query.all()
+    # Retrieve user input from dropdown
+    if request.method == 'POST':
+        deleteID = request.form['deleteID']
+        # Find the entry using the ID as a key
+        exists = ROC_members.query.filter_by(name=deleteID).first()
+        # If the entry exists, delete it
+        if exists:
+            db.session.delete(exists)
+            db.session.commit()
+            return redirect(url_for('roc_member'))
+    return render_template('roc_delete.html',roc_member=roc_member)
+
+@app.route('/research_team_delete',methods=['GET','POST'])
+def research_team_delete():
+    if not session.get('logged_in') :
+      return redirect(url_for('login')) #user is not logged in sends user to login screen Kody 2018-01-08
+    research_team = Research_Team.query.all()
+    # Retrieve user input from dropdown
+    if request.method == 'POST':
+        deleteID = request.form['deleteID']
+        # Find the entry using the ID as a key
+        exists = Research_Team.query.filter_by(name=deleteID).first()
+        # If the entry exists, delete it
+        if exists:
+            db.session.delete(exists)
+            db.session.commit()
+            return redirect(url_for('research_team'))
+    return render_template('research_team_delete.html',research_team=research_team)
 
 @app.route('/collab_delete',methods=['GET','POST'])
 def collab_delete():
