@@ -39,6 +39,25 @@ class CollabAddForm(FlaskForm):
   email = TextField("Email")
   submit = SubmitField("Save")
 
+class ROC_memberAddForm(FlaskForm):
+  name = TextField("Name")
+  
+  title = TextField("Title")
+  affiliation = TextField("Affiliation")
+  email = TextField("Email")
+  web_link = TextField("Web Link")
+  submit = SubmitField("Save")
+
+class Research_TeamAddForm(FlaskForm):
+  name = TextField("Name")
+  
+  title = TextField("Title")
+  role = TextField("Role")
+  description_of_responsibilities = TextField("Description of Responsibilities")
+  affiliation = TextField("Affiliation")
+  email = TextField("Email")
+  website = TextField("WebSite")
+  submit = SubmitField("Save")
 
 class ConferenceAddForm(FlaskForm):
   title = TextField("Title")

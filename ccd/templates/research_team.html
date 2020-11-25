@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<script src="{{ url_for('static', filename='js/research_team.js') }}"></script>
+
+<h1 class="w3-center">Research Team</h1>
+<br>
+
+{% if session.logged_in %}
+<a href="{{ url_for("research_team_add") }}" class="w3-button w3-large w3-blue">Add</a>
+<a href="{{ url_for("research_team_delete") }}" class="w3-button w3-large w3-red">Delete</a>
+<br/><br/>
+{% endif %}
+
+<table id="res" class="display compact w3-medium cell-border"  width="100%">
+        <thead>
+            <tr class="w3-grey">
+                <th>Name</th>
+                
+                <th>Title</th>
+                <th>Role</th>
+                <th>Description of Responsibilities</th>
+                <th>Affiliation</th>
+                
+                <th>Email</th>
+                <th>WebSite</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for x in research %}
+            <tr>
+                <td>{{ x.name}}</td>
+                
+                <td>{{ x.title}}</td>
+                <td>{{ x.role}}</td>
+                <td>{{ x.description_of_responsibilities}}</td>
+                <td>{{ x.affiliation}}</td>
+                <td>{{ x.email}}</td>
+                <td>{{ x.website}}</td>
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+</table>
+
+
+{% endblock %}

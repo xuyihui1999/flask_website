@@ -23,14 +23,15 @@
 #wrapper{
   width: 1400px;
   margin: 0 auto;
-
+  
 }
-
-#wrapper-head{
-  width: 1200px;
+#ft_wrapper{
+  width: 1400px;
   margin: 0 auto;
-
+  
 }
+
+
 li {
     display: inline;
     
@@ -121,7 +122,12 @@ img:hover{
   
 }
 
-.body { font-family: 'Roboto Condensed', sans-serif; font-size:18px; position: relative;  margin: 0 auto;}
+.body { 
+  font-family: 'Roboto Condensed', sans-serif; 
+  font-size:18px; 
+  position: relative;  
+  
+}
 h1 { font-family: 'Oswald', sans-serif; font-size:30px; }
 mark { background-color:#fff; color:black; }
 .footer { 
@@ -172,6 +178,30 @@ mark { background-color:#fff; color:black; }
 }
 
 
+
+
+
+
+.banner p {
+  
+  
+  display: block;
+ }
+.banner img {
+  float: left; 
+    
+ }
+ .banner span {
+  padding-top: 50px;
+  font-size: 17px;
+  vertical-align:top;
+ }
+  .banner .ban2 span {
+  padding-top: 50px;
+  font-size: 17px;
+  vertical-align:top;
+ }
+
 </style>
 
 
@@ -196,38 +226,61 @@ mark { background-color:#fff; color:black; }
 </script>
 
 <body style="background-color:#ffffff ;" >
+
+
   <div id="wrapper">
+
+    
 <!-- Navbar (sit on top) -->
-<div id="page-container">
+<div id="page-container" style = "padding-bottom: 60px;">
 
 <div >
   <!--<div class="w3-bar" style = "box-shadow: 0 2px 1px 3px  rgb(198, 244, 255);">-->
     <div class="w3-bar" >
-
+<!--
     <div style="background: white;  padding-bottom: 6px; ">
         <a href="{{ url_for("main") }}">
         <img alt="4dwheat_logo" src="{{url_for('static',filename='images/4dwheat_blue.png')}}" class="responsive" style="height:89px;width:360px;"/>
         </a> 
-        
-        <h style="text-align: center;padding-left: 20px; font-size: 21px; color :rgb(9, 110, 26)">A GENOMIC PLATFORM TO MAXIMIZE BREEDING VALUE OF GENETIC RESOURCES</h>
-        
+
         <a href="https://www.genomecanada.ca/">
         <img alt="genome_ca" src="{{url_for('static',filename='images/genome_ca.png')}}" class="responsive" style="height:89px;width:150px; " ALIGN="right"/>
        </a> 
+       
+        <h style="text-align: center;padding-left: 20px; font-size: 21px; color :rgb(9, 110, 26)">A GENOMIC PLATFORM TO MAXIMIZE BREEDING VALUE OF GENETIC RESOURCES
+        </h>
+       
       </div>
+--> 
+<div class="banner">
+  <div class="">
+<p style="color: #fff;">
+  <a href="{{ url_for("main") }}">
+  <img alt="4dwheat_logo" src="{{url_for('static',filename='images/4dwheat_blue.png')}}" class="responsive" style="height:79px;width:330px; clear:left;" />
+  </a> 
+
+  <a href="https://www.genomecanada.ca/">
+    <img alt="genome_ca" src="{{url_for('static',filename='images/genome_ca.png')}}" class="responsive" style="height:79px;width:130px; float: right" />
+   </a> 
+
+  <br>
+  <span style="color:rgb(163, 255, 149) "><h style="text-align: center;padding-left: 18px; font-size: 18px; color :rgb(9, 110, 26)">2018 Large-Scale Applied Research Project Competition
+  </h></span>
+        <br >
+       <span class="ban2" style="color:rgb(163, 255, 149)" style = ""><h style="text-align: center;padding-left: 23px; font-size: 21px; color :rgb(9, 110, 26)">A GENOMIC PLATFORM TO MAXIMIZE BREEDING VALUE OF GENETIC RESOURCES
+      </h></span>
+      
+       
+      </p>
+  </div>
+</div>
+
 
     <div style="background-color: rgb(255, 255, 255); padding-bottom: 6px;">
       
   </div>
-    
-
-
-    
-
-    
     <div class="navbar topmenu" > 
-    
-    
+
     <ul>
        
     <li><a class = "menu-link" href="{{ url_for("main") }}"  >Home</a> </li>
@@ -236,14 +289,15 @@ mark { background-color:#fff; color:black; }
     
     <div class="dropdown" >
       <li>
-        <button class="dropbtn"   >Teams</button>
+        <button class="dropbtn"   >Participants</button>
 
         <div class="dropdown-content">
           <ul>
-            <li><a href="{{ url_for("rdc") }}" class="">RDCs</a></li>
-            <li><a href="{{ url_for("collab") }}" class="">Collaborators</a></li>
-            <li><a href="{{ url_for("participants") }}" class="">Participants</a></li>
-            <li><a href="{{ url_for("support") }}" class="">Support</a></li>
+            
+            <li><a href="{{ url_for("research_team") }}" class="">Research Team</a></li>
+            <li><a href="{{ url_for("roc_member") }}" class="">ROC members</a></li>
+            
+            
           </ul>
         </div>
       </li>
@@ -344,7 +398,7 @@ mark { background-color:#fff; color:black; }
 </div>
 
 
-    
+<div id = "#ft_wrapper">   
 <footer class="text-center" id ="ft">
             <div class="container-fluid gradient">
                 <div class="container footer"  style="background: linear-gradient(88deg, rgb(253, 255, 253),  rgb(163, 255, 149)); padding-top: 10px; padding-bottom: 0px;" >
@@ -362,5 +416,6 @@ mark { background-color:#fff; color:black; }
             </div>
         </footer>
   </div>
+</div>
 </body>
 </html>
