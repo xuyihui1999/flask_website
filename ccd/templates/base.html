@@ -266,7 +266,7 @@ mark { background-color:#fff; color:black; }
    </a> 
 
   <br>
-  <span style="color:rgb(163, 255, 149) "><h style="text-align: center;padding-left: 18px; font-size: 18px; color :rgb(9, 110, 26)">2018 Large-Scale Applied Research Project Competition
+  <span style="color:rgb(163, 255, 149) "><h style="text-align: center;padding-left: 18px; font-size: 18px; color:rgb(17, 129, 221)">&nbsp;2018 Large-Scale Applied Research Project Competition
   </h></span>
         <br >
        <span class="ban2" style="color:rgb(163, 255, 149)" style = ""><h style="text-align: center;padding-left: 23px; font-size: 23px; color :rgb(9, 110, 26)">A GENOMIC PLATFORM TO MAXIMIZE BREEDING VALUE OF GENETIC RESOURCES
@@ -322,7 +322,7 @@ mark { background-color:#fff; color:black; }
 
       <div class="vertical-line w3-dropdown-hover"> </div>
 
-
+<!--
       <div class="dropdown">
         <li>
         <button class="dropbtn  "> Budget/Cost </button>
@@ -335,7 +335,7 @@ mark { background-color:#fff; color:black; }
         </div>
         <li>
       </div>
-
+-->
 
       <div class="vertical-line w3-dropdown-hover"> </div>
 
@@ -345,18 +345,13 @@ mark { background-color:#fff; color:black; }
         <div class="dropdown-content">
           <ul>
           <li><a href="{{ url_for("publications") }}" >Publications</a></li>
-          <li><a href="{{ url_for("conferences") }}" >Conferences</a></li>
+          <li><a href="{{ url_for("conferences") }}" >Presentations</a></li>
           </ul>
         </div>
       </li>
       </div>
 
-
       <div class="vertical-line w3-dropdown-hover"> </div>
-
-      <li><a class = "menu-link" href="{{ url_for("tools") }}">Tools</a></li>
-      <div class="vertical-line w3-dropdown-hover"> </div>
-
       <div class="dropdown">
       <li>
         <button class="dropbtn " > Databases </button>
@@ -368,6 +363,11 @@ mark { background-color:#fff; color:black; }
         </div>
       </li>
       </div>
+
+      <div class="vertical-line w3-dropdown-hover"> </div>
+      <li><a class = "menu-link" href="{{ url_for("tools") }}">Tools</a></li>
+
+
       <div class="vertical-line w3-dropdown-hover"> </div>
     <li><a class = "menu-link" href="{{ url_for("data_archive") }}">Data Archive</a> </li>
       <div class="vertical-line w3-dropdown-hover"> </div>
