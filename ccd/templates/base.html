@@ -28,9 +28,7 @@
 #ft_wrapper{
   width: 1400px;
   margin: 0 auto;
-  
 }
-
 
 li {
     display: inline;
@@ -39,12 +37,22 @@ li {
 ul {
     margin-top : 0;
     padding: 0;
-    list-style-type: none;
-    
+    list-style-type: none; 
+}
+
+
+td {
+  font-size: 16px;
+}
+
+th {
+  font-size: 18px;
+}
+table {
+  padding-top: 10px;
 }
 
 img:hover{
-    
     transform: scale(1.1); 
     }
 
@@ -123,12 +131,9 @@ img:hover{
 }
 
 .body { 
-  font-family: 'Roboto Condensed', sans-serif; 
-  font-size:18px; 
   position: relative;  
-  
 }
-h1 { font-family: 'Oswald', sans-serif; font-size:30px; }
+h1 { font-size:30px; }
 mark { background-color:#fff; color:black; }
 .footer { 
     text-align: center;
@@ -177,14 +182,19 @@ mark { background-color:#fff; color:black; }
     color:  rgb(17, 129, 221);
 }
 
+.text-center li{
+  text-align: center;
+  margin-bottom:0px; 
+  margin-top:0px ;
+}
 
-
-
+.text-center ul{
+  
+  width: 100%;
+}
 
 
 .banner p {
-  
-  
   display: block;
  }
 .banner img {
@@ -234,7 +244,7 @@ mark { background-color:#fff; color:black; }
 
     
 <!-- Navbar (sit on top) -->
-<div id="page-container" style = "padding-bottom: 60px;">
+<div id="page-container" style = "padding-bottom: 600px;">
 
 <div >
   <!--<div class="w3-bar" style = "box-shadow: 0 2px 1px 3px  rgb(198, 244, 255);">-->
@@ -407,10 +417,69 @@ mark { background-color:#fff; color:black; }
                     <div>
                         <a href="http://intranet.agr.gc.ca/agrisource/eng?id=1287261736402" target="_blank" >
                             <img alt="AAFC" class="aafc-logo" style="height:45px;width:560px;" src="{{ url_for ('static', filename='images/aafc.png') }}" />
-                            
+                            <h style="display:inline; opacity: 50%; margin: 0px; padding: 0px;">Copyright © 2021<h></h>
                           </a>
+                           
+                          <ul>
+                            <li>
+                              <a href="https://www.saskatchewan.ca/">
+                              <img style="height:95px;width:20%;margin: 0% 8% 0% 10%;" src="{{ url_for ('static', filename='images/Province of Saskatchewan.png') }}" />
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://saskwheat.ca/">
+                              <img style="height:95px;width:23%;margin: 0% 8% 0% 0%;" src="{{ url_for ('static', filename='images/Saskatchewan Wheat Development Commission.png') }}" />
+                              </a>
+                            </li>
+                            
+                            <li>
+                              <a href="https://www.albertawheat.com/">
+                              <img style="height:95px;width:20%;margin: 0% 8% 0% 0%;" src="{{ url_for ('static', filename='images/Alberta Wheat Development Commission.png') }}" />
+                              </a>
+                            </li>
+                            
+                            <li>
+                              <a href="https://westerngrains.com/">
+                              <img style="height:95px;width:20%;margin: 0% 8% 0% 10%;" src="{{ url_for ('static', filename='images/Western Grains Research Foundation.png') }}" />
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="https://www.wheatresearch.ca/">
+                              <img style="height:95px;width:20%;margin: 0% 8% 0% 0%;" src="{{ url_for ('static', filename='images/Canadian Wheat Research Coalition.png') }}" />
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="https://www.viterra.com/web/canada">
+                              <img style="height:95px;width:20%;margin: 0% 8% 0% 0%;" src="{{ url_for ('static', filename='images/Viterra.png') }}" />
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="http://www.manitoba.ca/index.html">
+                              <img style="height:95px;width:20%;margin: 0% 8% 0% 10%;" src="{{ url_for ('static', filename='images/Manitoba Wheat and Barley Development Commission.png') }}" />
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://www.gov.mb.ca/iem/">
+                              <img style="height:95px;width:20%;margin: 0% 8% 0% 0%;" src="{{ url_for ('static', filename='images/Agriculture and Resource Development.png') }}" />
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://www.illumina.com/">
+                              <img style="height:85px;width:20%;margin: 0% 8% 0% 0%;" src="{{ url_for ('static', filename='images/illumina.png') }}" />
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://www.ontario.ca/page/ministry-economic-development-job-creation-trade">
+                              <img style="height:105px;width:20%;margin: 0% 8% 0% 10%;" src="{{ url_for ('static', filename='images/Ontario Ministry of Economic Development Job Creation and Trade.png') }}" />
+                              </a>
+                            </li>
+                            
+                          </ul>  
                         
-                          <h style="display:inline; opacity: 50%; margin: 0px; padding: 0px;">Copyright © 2021<h>
+                          
                       
                       </div>
                     
