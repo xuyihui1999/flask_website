@@ -1,3 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<style>
 .p-row{
     display: table;
     width: 100%;
@@ -137,3 +142,33 @@ background-color:rgb(96, 181, 238);
 .left-div ul li.highlight, .left-div ul li:hover{
   background-color:rgb(165, 204, 255);
 }
+
+
+</style>
+
+<script type="text/javascript">
+  
+$(function(){
+     $('ul li').click(function(){
+         $(this).addClass('highlight');
+         $(this).siblings().removeClass('highlight');
+     })
+});  
+</script>
+
+
+<div class = "page-body" style = "padding-bottom: 10px; overflow: hidden; padding-top: 30px;">
+  <div  class = "left-div">
+    
+    <ul >
+        {% block activity1_left %} {% endblock %}
+    </ul>
+  </div>
+
+    <div class = "right-div" >
+        {% block activity1_right %} {% endblock %}
+    </div>
+      
+    
+</div>
+{% endblock %}

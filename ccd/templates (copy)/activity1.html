@@ -1,75 +1,182 @@
 {% extends "base.html" %}
 {% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/activities.css') }}">
 <style>
-table {
-  font-family: arial, sans-serif;
+.p-row{
+    display: table;
+    width: 100%;
+  }
   
-  border-collapse: collapse;
-  width: 90%;
-  
-  border-top: 2px solid rgb(122, 180, 250);
-  border-bottom: 2px solid rgb(122, 180, 250);
-}
-table.center {
-  margin-left: auto; 
-  margin-right: auto;
-}
-
-th {
-    font-size: 20px;
-  font-weight: 600px;
-  text-align: left;
-  padding: 5px;
-  border-bottom: 2px solid rgb(122, 180, 250);
-}
-
-td {
-  font-size: 20px;
-  font-weight: 600px;
-  text-align: left;
-  padding: 5px;
-}
-
-tr:nth-child(even) {
-  background-color:rgb(212, 231, 255);
-}
-
-.border
-{
-	border-style:solid;
-    border-width:1px;
-    border-color:rgb(122, 180, 250);
-}
-
-center-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.column {
-    float: left;
-    width: 33.333%;
-    padding-right: 25px;
-}
-
-.column p{
-    font-size: 23px;
-    text-align: center;
+  .page-body {
+    position: relative;
     
+    
+  }
+  
+  table {
+    font-family: arial, sans-serif;
+    
+    border-collapse: collapse;
+    width: 90%;
+    
+    border-top: 2px solid rgb(122, 180, 250);
+    border-bottom: 2px solid rgb(122, 180, 250);
+  }
+  table.center {
+    margin-left: auto; 
+    margin-right: auto;
+  }
+  
+  th {
+    font-size: 20px;
+    font-weight: 600px;
+    text-align: left;
+    padding: 5px;
+    border-bottom: 2px solid rgb(122, 180, 250);
+  }
+  
+  td {
+    font-size: 20px;
+    font-weight: 600px;
+    text-align: left;
+    padding: 5px;
+  }
+  
+  tr:nth-child(even) {
+    background-color:rgb(212, 231, 255);
+  }
+  
+  .border
+  {
+      border-style:solid;
+      border-width:1px;
+      border-color:rgb(122, 180, 250);
+  }
+  
+  .center-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  .column {
+      float: left;
+      width: 33.333%;
+      padding-right: 10px;
+  }
+  
+  .column p, .row p{
+      font-size: 20px;
+      text-align: center;    
+  }
+  
+  .page-body span {
+     margin-bottom: 100px;
+  }
+  
+  .page-body p, .page-body ul, .page-body li{
+    font-size: 20px;
+  }
+  
+  .tier-title{
+    background-color: rgb(79, 156, 34); 
+    font-size: 35px; 
+    font-weight: 900; 
+    color:white ;
+    display:inline-block;
+  }
+
+  .left-div 
+{
+height: 80%; 
+float:left;
+
+padding-right: 10px;
+position: fixed;
+width:10%;
 }
+
+.right-div 
+{
+float:right;
+padding-left: 50px;
+width:90%;
+}  
+
+li a{
+  font-size: 16px;
+}
+
+.left-div ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 180px;
+  background-color: #d5ebff;
+  border: 2px solid rgb(90, 188, 253);
+  
+}
+.left-div ul li{
+  border: 2px solid rgb(90, 188, 253);
+  text-align: center;
+  padding-right: 0;
+  padding-top:5px;
+  padding-bottom: 5px;
+  
+}
+.left-div ul li a{
+display: block; width: 100%; height: 100%;
+}
+
+
+.left-div ul li a.highlight{
+background-color:rgb(96, 181, 238);
+}
+
+.left-div button{
+  
+  background-color: #d5ebff;
+}
+
+.left-div ul li.highlight, .left-div ul li:hover{
+  background-color:rgb(165, 204, 255);
+}
+
 
 </style>
 
-<br>
-<span style="background-color: rgb(248, 250, 133); font-size: 40px; font-weight: 900; ">Activity 1 Proposed sequencing strategy</span>
-<img style="height:705px;width:1360px;" src="{{ url_for ('static', filename='images/activity1_first_image.png') }}" />
+<script type="text/javascript">
+  
+$(function(){
+     $('ul li').click(function(){
+         $(this).addClass('highlight');
+         $(this).siblings().removeClass('highlight');
+     })
+});  
+</script>
+
+
+<div class = "page-body" style = "padding-bottom: 10px; overflow: hidden">
+  <div  class = "left-div">
+    <ul >
+      <li ><a href="#Activity-1-Proposed">Activity 1 Proposed sequencing strategy</a></li>
+      <li ><a href="#Activity-1-tier1">Activity 1: Tier 1</a></li>
+      <li ><a href="#Activity-1-tier2">Tier 2 Sequencing ? genomes</a></li>
+      <li ><a href="#Activity-1-tier3">Tier 3 Accessions</a></li> 
+    </ul>
+  </div>
+
+<div class = "right-div">
+<span id = "Activity-1-Proposed"style="background-color: rgb(248, 250, 133); font-size: 35px; font-weight: 900; ">Activity 1 Proposed sequencing strategy</span>
+<br><br><br><br><br>
+<img class = "center-image"style="height:405px;width:860px;" src="{{ url_for ('static', filename='images/activity1_first_image.png') }}" />
 
 <br><br><br>
-<span style="background-color: rgb(113, 185, 72); font-size: 35px; font-weight: 900; ">Activity 1: Tier 1</span>
-<p class = "border" style = "font-size: 26px; text-align: center;" >Sequencing genomes of Ae. markgrafii (C), Ae. comosa (M), Ae. speltoides (S), Ae. umbellulata (U), Ae. Uniaristata (N),  and Ae. Mutica (T)
+<span id = "Activity-1-tier1" class = "tier-title">Activity 1: Tier 1</span>
+<p class = "border" style = " text-align: center;" >Sequencing genomes of Ae. markgrafii (C), Ae. comosa (M), Ae. speltoides (S), Ae. umbellulata (U), Ae. Uniaristata (N),  and Ae. Mutica (T)
 </p>
-<p style = "font-size: 23px; text-align: center;font-weight: 700;" >Genome size estimates by flow cytometry
+<p style = "text-align: center;font-weight: 700;" >Genome size estimates by flow cytometry
 </p>
 
 <table class = "center">
@@ -125,7 +232,8 @@ center-image {
 
 
 <br><br><br>
-<span style="background-color: rgb(113, 185, 72); font-size: 35px; font-weight: 900; ">Tier 2 Sequencing ? genomes</span>
+
+<span id = "Activity-1-tier2" class = "tier-title">Tier 2 Sequencing ? genomes</span>
 <br><br><br>
 <table class = "center">
     <tr>
@@ -231,40 +339,82 @@ center-image {
   </p>
 
 <br><br><br>
-<span style="background-color: rgb(113, 185, 72); font-size: 35px; font-weight: 900; ">Tier 3 Accessions</span>
+
+<span id = "Activity-1-tier3" class = "tier-title">Tier 3 Accessions</span>
+
 <br>
 
-<ul style = "font-size: 23px;">
+<ul >
     <li>350 accessions of diploid, tetraploid and hexaploid from 23 Aegilops species and 4 Triticum species including many subspecies</li>
     <li>Selection will be based on genetic diversity, deepening the Aegilops representation and covering the subspecies of T. aestivum and T. turgidum</li>
 </ul>
 
-<img class = "center-image" style="height:650px;width:1360px;" src="{{ url_for ('static', filename='images/activity1_tier3_1.png') }}" />
+<img class = "center-image" style="width: 80%;" src="{{ url_for ('static', filename='images/activity1_tier3_1.png') }}" />
 <br><br>
-<img class = "center-image" style="height:985px;width:1360px;" src="{{ url_for ('static', filename='images/activity1_tier3_2.png') }}" />
+<img class = "center-image" style="width: 80%;" src="{{ url_for ('static', filename='images/activity1_tier3_2.png') }}" />
 
 <br><br><br>
-<span style="background-color: rgb(113, 185, 72); font-size: 35px; font-weight: 900;">Tier 3 Tetraploid Species Selection</span>
+<span class="tier-title">Tier 3 Tetraploid Species Selection</span>
 <br>
 
+<div class="p-row">
 
-<div style = "position:absolute;">
-
-<div class="column" style = "margin-bottom: 300px;">
-    <p >Wild emmer wheat (T. dicoccoides)<br>
-        186 accessions representing Fertile<br>Crescent region where grow WEW natural populations
+<div class="column" >
+    <p><b>Wild emmer wheat (T. dicoccoides)</b>     
     </p> 
-     
-    
   </div>
-  <div class="column" style = "margin-bottom: 300px;">
-    <p >HARNESSING DIVERSITY</p>
-    <br><br>
+  <div class="column">
+    <p><b>Domesticated emmer wheat (T. dicoccum)
+    </b>
+    </p> 
   </div>
-  <div class="column" style = "margin-bottom: 300px;">
-    <p >ADVANCING DOMESTICATION</p>  
-    <br><br>
-  </div>
+  <div class="column">
+    <p><b>Durum wheat landraces (T. durum)
+    </b>
+    </p> 
 </div>
 
+</div>
+
+
+    <div class="p-row">
+      <div class="column" >
+          <p>
+              186 accessions representing Fertile Crescent region where grow WEW natural populations
+          </p> 
+        </div>
+        <div class="column">
+          <p>
+          139 accessions from 29 countries
+          </p> 
+        </div>
+        <div class="column" >
+          <p>
+          140 accessions from 39 countries
+          </p> 
+        </div>
+      </div>
+
+      <div class="p-row">
+        <div class="column" >
+          <img  style="width:100%" class = "center-image" src="{{ url_for ('static', filename='images/activity1_tier3_map1.png') }}" />
+          </div>
+          <div class="column">
+            <img style="width:100%" class = "center-image" src="{{ url_for ('static', filename='images/activity1_tier3_map2.png') }}" /> 
+          </div>
+          <div class="column" >
+            <img  style="width:100%" class = "center-image" src="{{ url_for ('static', filename='images/activity1_tier3_map3.png') }}" />
+          </div>
+        </div>
+
+        <p style = "text-align: center; margin-top: 30px;" >
+          Complements Durum Wheat Tetraploid Wheat Collection and existing exome datasets<br>
+          90K analysis complete <br>
+          Sequencing completed for five accession of T. dicoccoides – existing projects, informatics pipeline
+          
+        </p>
+      </div>
+      
+    
+</div>
 {% endblock %}
