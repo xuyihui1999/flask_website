@@ -12,9 +12,11 @@ many relationships.
 
 # Imports -----------------------------------------------------------------------
 
+
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+
 
 # Setup -------------------------------------------------------------------------
 
@@ -23,6 +25,8 @@ app.config.from_object('config') # load configurations from config.py
 db = SQLAlchemy(app) # use SQLAlchemy to build the app's db
 
 # Models ------------------------------------------------------------------------
+
+
 
 '''
 This model is for the budget. 
@@ -94,7 +98,7 @@ class Collaborators(db.Model):
 
 class ROC_members(db.Model):
 
-        
+        id = db.Column(db.String(100))
         name = db.Column(db.String(100))
         title = db.Column(db.String(100))
         affiliation = db.Column(db.String(1000))
@@ -106,7 +110,7 @@ class ROC_members(db.Model):
 
 
 class Research_Team(db.Model):
-
+        id = db.Column(db.String(45))
         name = db.Column(db.String(100),primary_key=True)
         title = db.Column(db.String(100))
         role = db.Column(db.String(100))

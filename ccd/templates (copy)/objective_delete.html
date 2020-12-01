@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<script src="{{ url_for('static', filename='js/objective_delete.js') }}"></script>
+
+<div class="w3-card-4" style="max-width:50%; margin:auto">
+
+  <header class="w3-container w3-center">
+    <h1>Delete Objective</h1>
+  </header>
+
+  <div class="w3-container w3-white">
+    <form class="w3-container" method="post" action={{ url_for('objective_delete') }}>
+      <select name="deleteID" class="w3-block w3-section">
+        {% for x in objectives %}
+        <option value="{{ x.id }}">{{ x.short }}</option>
+        {% endfor %}
+      </select>
+      <br/>
+      <button class="button" type="submit" id="saveDelete">Delete</button>
+    </form>
+    <br/>
+  </div>
+</div>
+
+{% endblock %}

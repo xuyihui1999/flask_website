@@ -1,0 +1,82 @@
+.p-row{
+    display: table;
+    width: 100%;
+  }
+  
+  .page-body {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  table {
+    font-family: arial, sans-serif;
+    
+    border-collapse: collapse;
+    width: 90%;
+    
+    border-top: 2px solid rgb(122, 180, 250);
+    border-bottom: 2px solid rgb(122, 180, 250);
+  }
+  table.center {
+    margin-left: auto; 
+    margin-right: auto;
+  }
+  
+  th {
+      font-size: 20px;
+    font-weight: 600px;
+    text-align: left;
+    padding: 5px;
+    border-bottom: 2px solid rgb(122, 180, 250);
+  }
+  
+  td {
+    font-size: 20px;
+    font-weight: 600px;
+    text-align: left;
+    padding: 5px;
+  }
+  
+  tr:nth-child(even) {
+    background-color:rgb(212, 231, 255);
+  }
+  
+  .border
+  {
+      border-style:solid;
+      border-width:1px;
+      border-color:rgb(122, 180, 250);
+  }
+  
+  .center-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  .column {
+      float: left;
+      width: 33.333%;
+      padding-right: 10px;
+  }
+  
+  .column p, .row p{
+      font-size: 20px;
+      text-align: center;    
+  }
+  
+  .page-body span {
+     margin-bottom: 100px;
+  }
+  
+  .page-body p, .page-body ul, .page-body li{
+    font-size: 20px;
+  }
+  
+  .tier-title{
+    background-color: rgb(79, 156, 34); 
+    font-size: 35px; 
+    font-weight: 900; 
+    color:white ;
+    display:inline-block;
+  }

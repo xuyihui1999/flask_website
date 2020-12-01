@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="w3-card-4" style="max-width:50%; margin:auto">
+
+  <header class="w3-container w3-center">
+    <h1>Add Milestone</h1>
+  </header>
+
+  <div class="w3-container w3-white">
+    <form action="{{ url_for('milestone_add') }}" method="post" class="w3-container">
+        {{ form.hidden_tag() }}
+        <dl>
+            <dt>{{ form.milestone_id.label }}:
+            <dt>{{ form.milestone_id }}
+            <dt>{{ form.short_title.label }}:
+            <dt>{{ form.short_title }}
+            <dt>{{ form.start_date.label }}:
+            <dt>{{ form.start_date }}
+            <dt>{{ form.end_date.label }}:
+            <dt>{{ form.end_date }}
+            <dt>{{ form.module.label }}:
+            <dt>{{ form.module }}
+            <dt>{{ form.assigned_to.label }}:
+            <dt>{{ form.assigned_to }}
+            <dt>{{ form.activity.label }}:
+            <dt>{{ form.activity(rows=5,cols=30) }}
+            <dt>{{ form.milestone.label }}:
+            <dt>{{ form.milestone(rows=5,cols=30) }}
+            <dt>{{ form.progress.label }}:
+            <dt>{{ form.progress(rows=5,cols=30) }}
+            <dt>{{ form.variance.label }}:
+            <dt>{{ form.variance(rows=5,cols=30) }}
+            <br/><br/>
+            <dt>{{ form.submit }}
+        </dl>
+    </form>
+  </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="w3-card-4" style="max-width:50%; margin:auto">
+
+  <header class="w3-container w3-center">
+    <h1>Add Collaborator</h1>
+  </header>
+
+  <div class="w3-container w3-white">
+    <form action="{{ url_for('collab_add') }}" method="post" class="w3-container">
+        {{ form.hidden_tag() }}
+        <dl>
+            <dt>{{ form.name1.label }}:
+            <dt>{{ form.name1 }}
+            <dt>{{ form.name2.label }}:
+            <dt>{{ form.name2 }}
+            <dt>{{ form.title.label }}:
+            <dt>{{ form.title }}
+            <dt>{{ form.role_expertise.label }}:
+            <dt>{{ form.role_expertise(rows=5,cols=40) }}
+            <dt>{{ form.country.label }}:
+            <dt>{{ form.country }}
+            <dt>{{ form.type.label }}:
+            <dt>{{ form.type }}
+            <dt>{{ form.affiliation.label }}:
+            <dt>{{ form.affiliation }}
+            <dt>{{ form.email.label }}:
+            <dt>{{ form.email }}
+            <br/><br/>
+            <dt>{{ form.submit }}
+        </dl>
+    </form>
+  </div>
+
+</div>
+
+{% endblock %}

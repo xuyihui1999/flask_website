@@ -239,6 +239,11 @@ def cost_subcategory_delete():
             return redirect(url_for('cost_subcategories'))
     return render_template('cost_subcategory_delete.html',cost_subcategories=cost_subcategories)
 
+
+@app.route('/activity1',methods=['GET','POST'])
+def activity1():
+   
+   return render_template('activity1.html')
 # Milestones ------------------------------------------------------------------
 
 @app.route('/milestones',methods=['GET','POST'])
