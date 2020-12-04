@@ -317,10 +317,10 @@ mark { background-color:#fff; color:black; }
         <ul>
         <li><a href="{{ url_for("milestones") }}">Overview</a></li>
         <li><a href="{{ url_for("activity1") }}">Activity 1: Harnessing Diversity</a></li>
-        <li><a href="{{ url_for("objectives") }}">Activity 2: Advancing Domestication</a></li>
-        <li><a href="{{ url_for("objectives") }}">Activity 3: Enabling Discovery</a></li>
-        <li><a href="{{ url_for("objectives") }}">Activity 4: Expediting Delivery</a></li>
-        <li><a href="{{ url_for("objectives") }}">Activity 5: Valuating Diversity</a></li>
+        <li><a href="{{ url_for("activity2") }}">Activity 2: Advancing Domestication</a></li>
+        <li><a href="{{ url_for("activity3") }}">Activity 3: Enabling Discovery</a></li>
+        <li><a href="{{ url_for("activity4") }}">Activity 4: Expediting Delivery</a></li>
+        <li><a href="{{ url_for("activity5") }}">Activity 5: Valuating Diversity</a></li>
         </ul>
         </div>
       </li>
@@ -329,7 +329,9 @@ mark { background-color:#fff; color:black; }
 
       <div class="vertical-line w3-dropdown-hover"> </div>
 
-      <li><a class = "menu-link" >Progress</a> </li>
+      
+
+      <li><a class = "menu-link" href="{{ url_for("Progress") }}">Progress</a> </li>
       
       <div class="vertical-line w3-dropdown-hover"> </div>
 

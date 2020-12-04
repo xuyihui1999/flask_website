@@ -247,7 +247,7 @@ mark { background-color:#fff; color:black; }
 
     
 <!-- Navbar (sit on top) -->
-<div id="page-container" style = "padding-bottom: 320px;">
+<div id="page-container" style = "padding-bottom: 260px;">
 
 <div >
   <!--<div class="w3-bar" style = "box-shadow: 0 2px 1px 3px  rgb(198, 244, 255);">-->
@@ -317,10 +317,10 @@ mark { background-color:#fff; color:black; }
         <ul>
         <li><a href="{{ url_for("milestones") }}">Overview</a></li>
         <li><a href="{{ url_for("activity1") }}">Activity 1: Harnessing Diversity</a></li>
-        <li><a href="{{ url_for("objectives") }}">Activity 2: Advancing Domestication</a></li>
-        <li><a href="{{ url_for("objectives") }}">Activity 3: Enabling Discovery</a></li>
-        <li><a href="{{ url_for("objectives") }}">Activity 4: Expediting Delivery</a></li>
-        <li><a href="{{ url_for("objectives") }}">Activity 5: Valuating Diversity</a></li>
+        <li><a href="{{ url_for("activity2") }}">Activity 2: Advancing Domestication</a></li>
+        <li><a href="{{ url_for("activity3") }}">Activity 3: Enabling Discovery</a></li>
+        <li><a href="{{ url_for("activity4") }}">Activity 4: Expediting Delivery</a></li>
+        <li><a href="{{ url_for("activity5") }}">Activity 5: Valuating Diversity</a></li>
         </ul>
         </div>
       </li>
@@ -329,7 +329,7 @@ mark { background-color:#fff; color:black; }
 
       <div class="vertical-line w3-dropdown-hover"> </div>
 
-      <li><a class = "menu-link" >Progress</a> </li>
+      <li><a class = "menu-link" href="{{ url_for("Progress") }}">Progress</a> </li>
       
       <div class="vertical-line w3-dropdown-hover"> </div>
 
@@ -400,20 +400,20 @@ mark { background-color:#fff; color:black; }
                 <div class="container footer"  style="background: linear-gradient(88deg, rgb(253, 255, 253),  rgb(163, 255, 149)); padding-top: 10px; padding-bottom: 0px;" >
                     <div>
                         <a href="http://intranet.agr.gc.ca/agrisource/eng?id=1287261736402" target="_blank" >
-                            <img alt="AAFC" class="aafc-logo" style="height:45px;width:560px;position:relative; bottom:20px" src="{{ url_for ('static', filename='images/aafc.png') }}" />
+                            <img alt="AAFC" class="aafc-logo" style="height:35px;width:430px;position:relative; bottom:10px" src="{{ url_for ('static', filename='images/aafc.png') }}" />
                             
                           </a>
 
                           <a href="https://www.genomecanada.ca/">
-                            <img alt="genome_ca" src="{{url_for('static',filename='images/genome_ca.png')}}"  style="height:100px;width:180px;padding-left: 10px;" />
+                            <img alt="genome_ca" src="{{url_for('static',filename='images/genome_ca.png')}}"  style="height:60px;width:120px;padding-left: 10px;" />
                            </a> 
                            <a href="https://www.genomeprairie.ca/">
-                            <img alt="genome_ca" src="{{url_for('static',filename='images/genome prairie.png')}}"  style="height:100px;width:140px;padding-left: 10px;" />
+                            <img alt="genome_ca" src="{{url_for('static',filename='images/genome prairie.png')}}"  style="height:60px;width:100px;padding-left: 10px;" />
                            
                             </a>
 
                             <a href="https://www.ontariogenomics.ca/">
-                              <img alt="genome_ca" src="{{url_for('static',filename='images/ontario genomics.png')}}"  style="height:100px;width:180px;padding-left: 10px;" />
+                              <img alt="genome_ca" src="{{url_for('static',filename='images/ontario genomics.png')}}"  style="height:60px;width:130px;padding-left: 10px;" />
                               
                               </a>
                               
@@ -421,57 +421,57 @@ mark { background-color:#fff; color:black; }
                           <ul style = "padding-top: 10px;"> 
                             <li>
                               <a href="https://www.saskatchewan.ca/">
-                              <img style="height:55px;width:12%;margin: 0% 2% 0% 3%;" src="{{ url_for ('static', filename='images/Province of Saskatchewan.png') }}" />
+                              <img style="height:35px;width:7.5%;margin: 0% 2% 0% 0%;" src="{{ url_for ('static', filename='images/Province of Saskatchewan.png') }}" />
                               </a>
                             </li>
                             <li>
                               <a href="https://saskwheat.ca/">
-                              <img style="height:55px;width:12%;margin: 0% 2% 0% 0%;" src="{{ url_for ('static', filename='images/Saskatchewan Wheat Development Commission.png') }}" />
+                              <img style="height:35px;width:7.5%;margin: 0% 2% 0% 0%;" src="{{ url_for ('static', filename='images/Saskatchewan Wheat Development Commission.png') }}" />
                               </a>
                             </li>
                             
                             <li>
                               <a href="https://www.albertawheat.com/">
-                              <img style="height:55px;width:12%;margin: 0% 2% 0% 0%;" src="{{ url_for ('static', filename='images/Alberta Wheat Development Commission.png') }}" />
+                              <img style="height:35px;width:7.5%;margin: 0% 2% 0% 0%;" src="{{ url_for ('static', filename='images/Alberta Wheat Development Commission.png') }}" />
                               </a>
                             </li>
                             
                             <li>
                               <a href="https://westerngrains.com/">
-                              <img style="height:55px;width:10%;margin: 0% 2% 0% 0%;" src="{{ url_for ('static', filename='images/Western Grains Research Foundation.png') }}" />
+                              <img style="height:35px;width:6%;margin: 0% 2% 0% 0%;" src="{{ url_for ('static', filename='images/Western Grains Research Foundation.png') }}" />
                               </a>
                             </li>
 
                             <li>
                               <a href="https://www.wheatresearch.ca/">
-                              <img style="height:55px;width:12%;margin: 0% 2% 0% 0%;" src="{{ url_for ('static', filename='images/Canadian Wheat Research Coalition.png') }}" />
+                              <img style="height:35px;width:7.5%;margin: 0% 2% 0% 0%;" src="{{ url_for ('static', filename='images/Canadian Wheat Research Coalition.png') }}" />
                               </a>
                             </li>
 
                             <li>
                               <a href="https://www.viterra.com/web/canada">
-                              <img style="height:55px;width:12%;margin: 0% 2% 0% 0%;" src="{{ url_for ('static', filename='images/Viterra.png') }}" />
+                              <img style="height:35px;width:7.5%;margin: 0% 2% 0% 0%;" src="{{ url_for ('static', filename='images/Viterra.png') }}" />
                               </a>
                             </li>
 
                             <li>
                               <a href="http://www.manitoba.ca/index.html">
-                              <img style="height:55px;width:12%;margin: 0% 2% 0% 0%;" src="{{ url_for ('static', filename='images/Manitoba Wheat and Barley Development Commission.png') }}" />
+                              <img style="height:35px;width:7.5%;margin: 0% 2% 0% 0%;" src="{{ url_for ('static', filename='images/Manitoba Wheat and Barley Development Commission.png') }}" />
                               </a>
                             </li>
                             <li>
                               <a href="https://www.gov.mb.ca/iem/">
-                              <img style="height:55px;width:15%;margin: 0% 2% 0% 0%;" src="{{ url_for ('static', filename='images/Agriculture and Resource Development.png') }}" />
+                              <img style="height:35px;width:8.5%;margin: 0% 2% 0% 0%;" src="{{ url_for ('static', filename='images/Agriculture and Resource Development.png') }}" />
                               </a>
                             </li>
                             <li>
                               <a href="https://www.illumina.com/">
-                              <img style="height:55px;width:15%;margin: 0% 2% 0% 0%;" src="{{ url_for ('static', filename='images/illumina.png') }}" />
+                              <img style="height:35px;width:8.5%;margin: 0% 2% 0% 0%;" src="{{ url_for ('static', filename='images/illumina.png') }}" />
                               </a>
                             </li>
                             <li>
                               <a href="https://www.ontario.ca/page/ministry-economic-development-job-creation-trade">
-                              <img style="height:55px;width:16%;margin: 0% 2% 0% 0%;" src="{{ url_for ('static', filename='images/Ontario Ministry of Economic Development Job Creation and Trade.png') }}" />
+                              <img style="height:35px;width:8.6%;margin: 0% 2% 0% 0%;" src="{{ url_for ('static', filename='images/Ontario Ministry of Economic Development Job Creation and Trade.png') }}" />
                               </a>
                             </li>
 

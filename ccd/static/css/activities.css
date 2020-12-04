@@ -1,93 +1,119 @@
 .p-row{
-    display: table;
-    width: 100%;
-  }
-  
-  .page-body {
-    position: relative;
-    
-    
-  }
-  
-  table {
-    font-family: arial, sans-serif;
-    
-    border-collapse: collapse;
-    width: 90%;
-    
-    border-top: 2px solid rgb(122, 180, 250);
-    border-bottom: 2px solid rgb(122, 180, 250);
-  }
-  table.center {
-    margin-left: auto; 
-    margin-right: auto;
-  }
-  
-  th {
-    font-size: 20px;
-    font-weight: 600px;
-    text-align: left;
-    padding: 5px;
-    border-bottom: 2px solid rgb(122, 180, 250);
-  }
-  
-  td {
-    font-size: 20px;
-    font-weight: 600px;
-    text-align: left;
-    padding: 5px;
-  }
-  
-  tr:nth-child(even) {
-    background-color:rgb(212, 231, 255);
-  }
-  
-  .border
-  {
-      border-style:solid;
-      border-width:1px;
-      border-color:rgb(122, 180, 250);
-  }
-  
-  .center-image {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-  }
-  
-  .column {
-      float: left;
-      width: 33.333%;
-      padding-right: 10px;
-  }
-  
-  .column p, .row p{
-      font-size: 20px;
-      text-align: center;    
-  }
-  
-  .page-body span {
-     margin-bottom: 100px;
-  }
-  
-  .page-body p, .page-body ul, .page-body li{
-    font-size: 20px;
-  }
-  
-  .tier-title{
-    background-color: rgb(79, 156, 34); 
-    font-size: 35px; 
-    font-weight: 900; 
-    color:white ;
-    display:inline-block;
-  }
+  display: table;
+  width: 100%;
+}
 
-  .left-div 
+.page-body {
+  position: relative;
+  
+  
+}
+
+table {
+  font-family: arial, sans-serif;
+  
+  border-collapse: collapse;
+  width: 90%;
+  
+  border-top: 2px solid rgb(122, 180, 250);
+  border-bottom: 2px solid rgb(122, 180, 250);
+}
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+th {
+  font-size: 20px;
+  font-weight: 600px;
+  text-align: left;
+  padding: 5px;
+  border-bottom: 2px solid rgb(122, 180, 250);
+}
+
+td {
+  font-size: 20px;
+  font-weight: 600px;
+  text-align: left;
+  padding: 5px;
+}
+
+tr:nth-child(even) {
+  background-color:rgb(212, 231, 255);
+}
+
+
+
+
+.border
+{
+    border-style:solid;
+    border-width:1px;
+    border-color:rgb(122, 180, 250);
+}
+
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+}
+
+.column33 {
+    float: left;
+    width: 33.333%;
+    padding-right: 10px;
+}
+
+.column33 p, .row p{
+    font-size: 20px;
+    text-align: center;    
+}
+
+.page-body span {
+   margin-bottom: 100px;
+}
+
+.page-body p, .page-body ul, .page-body li{
+  font-size: 20px;
+}
+
+.tier-title{
+  background-color: rgb(79, 156, 34); 
+  font-size: 26px; 
+  font-weight: 900; 
+  color:rgb(255, 255, 255) ;
+  display:inline-block;
+  margin-top: 60px;
+}
+
+.t-title{
+  background-color: rgb(79, 156, 34); 
+  font-size: 26px; 
+  font-weight: 900; 
+  color:rgb(255, 255, 255) ;
+  
+  margin-top: 60px;
+}
+
+
+.top-tier-title{
+  
+  font-size: 26px; 
+  font-weight: 900; 
+  display:inline-block;
+  background-color: rgb(248, 250, 133); 
+  color:rgb(0, 0, 0) ; 
+  margin-top: 5px;
+  
+}
+
+.left-div 
 {
 height: 80%; 
 float:left;
 
-padding-right: 10px;
+
 position: fixed;
 width:10%;
 }
@@ -96,29 +122,29 @@ width:10%;
 {
 float:right;
 padding-left: 50px;
-width:90%;
+width:86%;
 }  
 
 li a{
-  font-size: 16px;
+font-size: 16px;
 }
 
 .left-div ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 180px;
-  background-color: #d5ebff;
-  border: 2px solid rgb(90, 188, 253);
-  
+list-style-type: none;
+margin: 0;
+padding: 0;
+width: 180px;
+background-color: #d5ebff;
+border: 2px solid rgb(90, 188, 253);
+
 }
 .left-div ul li{
-  border: 2px solid rgb(90, 188, 253);
-  text-align: center;
-  padding-right: 0;
-  padding-top:5px;
-  padding-bottom: 5px;
-  
+border: 2px solid rgb(90, 188, 253);
+text-align: center;
+padding-right: 0;
+padding-top:5px;
+padding-bottom: 5px;
+
 }
 .left-div ul li a{
 display: block; width: 100%; height: 100%;
@@ -130,10 +156,43 @@ background-color:rgb(96, 181, 238);
 }
 
 .left-div button{
-  
-  background-color: #d5ebff;
+
+background-color: #d5ebff;
 }
 
 .left-div ul li.highlight, .left-div ul li:hover{
-  background-color:rgb(165, 204, 255);
+background-color:rgb(165, 204, 255);
+}
+
+.column25{
+  float: left;
+  width: 25%;
+  padding-right: 10px;
+}
+
+.column50{
+  float: left;
+  width: 50%;
+  padding-right: 10px;
+}
+
+.column20 {
+  float: left;
+  width: 20%;
+  padding-right: 10px;
+}
+
+.column80 {
+  float: left;
+  width: 80%;
+  padding-right: 10px;
+}
+
+.video-center{
+  margin: 0 auto;
+}
+
+video {
+  display: block;
+  margin: auto;
 }

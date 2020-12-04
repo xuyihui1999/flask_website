@@ -1,0 +1,140 @@
+{% extends "activity_base.html" %}
+
+
+
+{% block activity1_left %}
+
+
+<li ><a href="#Activity2-Transforming-Wheat">Activity 2: Transforming wild emmer wheat</a></li>
+<li ><a href="#Activity2-ACCESSING-D">Activity 2: ACCESSING D GENOME VARIATION
+</a></li>
+
+{% endblock %}
+
+
+{% block activity1_right %}
+
+<style>
+  
+  
+  </style>
+
+<span id = "Activity2-Transforming-Wheat" class="top-tier-title">
+    Activity 2: Transforming wild emmer wheat using GRF-GIF chimeras that enhance regeneration efficiency
+</span>
+
+<div class="p-row">
+    <div class="column50" >
+      <img  style="width:80%" class = "center-image" src="{{ url_for ('static', filename='images/activity2_wild_wheat1.png') }}" />
+      </div>
+      <div class="column50">
+        <img style="width:80%" class = "center-image" src="{{ url_for ('static', filename='images/activity2_wild_wheat2.png') }}" /> 
+      </div>
+    
+    </div>
+
+    <div class="p-row" >
+      
+        <div class="column50" >
+          <img style="width: 70%;" class = "center-image" src="{{ url_for ('static', filename='images/activity2_wild_wheat3.png') }}" />
+        </div>
+      
+        <div class="column50" >
+          <img style="width: 76%;" class = "center-image" src="{{ url_for ('static', filename='images/activity2_wild_wheat4.png') }}" />
+        </div>
+      
+      </div>
+
+    <p style = "text-align: center;" >
+      Protocol described in Debernardi et al. 2020
+    </p>
+
+
+
+
+
+<span id = "Activity-1-tier2" class = "tier-title">Activity 2: ACCESSING D GENOME VARIATION
+</span>
+
+<img class = "center-image" style="width: 60%;" src="{{ url_for ('static', filename='images/activity2_accessing_d.png') }}" />
+
+<table class = "center">
+    <tr>
+      <th>Population</th>
+      <th>SHW</th>
+      <th>SHW pedigree</th>
+      <th>Recurrent</th>
+      <th>Size</th>
+      <th>Status</th>
+    </tr>
+    <tr>
+      <td>19_C44CAR
+      </td>
+      <td>C44
+      </td>
+      <td>Langdon/AS2386
+      </td>
+      <td>Carberry
+      </td>
+      <td>105</td>
+      <td>BC<sub>1</sub>F<sub>3-5</sub></td>
+    </tr>
+    <tr>
+      <td>19_C45CAR
+      </td>
+      <td>C45
+      </td>
+      <td>Langdon/AS2399
+      </td>
+      <td>Carberry</td>
+      <td>150-200
+      </td>
+      <td>BC<sub>1</sub>F<sub>4</sub></td>
+    </tr>
+    <tr>
+      <td>19_C52CAR
+      </td>
+      <td>C52
+      </td>
+      <td>PI94655/AS2404
+      </td>
+      <td>Carberry
+      </td>
+      <td>200+</td>
+      <td>BC<sub>1</sub>F<sub>6</sub></td>
+    </tr>
+    <tr>
+      <td>18_C65CAR
+      </td>
+      <td>C65</td>
+      <td>PI377655/AS2399
+      </td>
+      <td>Carberry
+      </td>
+      <td>200+</td>
+      <td>BC<sub>1</sub>F<sub>6</sub></td>
+    </tr>
+    <tr>
+      <td>18_C66CAR
+      </td>
+      <td>C66</td>
+      <td>PI377655/AS2386
+      </td>
+      <td>Carberry
+      </td>
+      <td>200+</td>
+      <td>BC<sub>1</sub>F<sub>6</sub></td>
+    </tr>
+  </table>
+  
+  
+
+        <p style = "text-align: center; margin-top: 30px;" >
+          Complements Durum Wheat Tetraploid Wheat Collection and existing exome datasets<br>
+          90K analysis complete <br>
+          Sequencing completed for five accession of T. dicoccoides – existing projects, informatics pipeline
+          
+        </p>
+
+
+        {% endblock %}

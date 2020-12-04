@@ -1,6 +1,7 @@
 {% extends "activity_base.html" %}
 
 
+
 {% block activity1_left %}
 
 
@@ -12,18 +13,30 @@
 
 
 {% block activity1_right %}
-<span id = "Activity-1-Proposed"style="background-color: rgb(248, 250, 133); font-size: 35px; font-weight: 900; ">Activity 1 Proposed sequencing strategy</span>
-<br><br><br><br><br>
+
+<style>
+  #Genome_size td:nth-child(1) {
+  font-style: italic;
+}
+
+  #two_Sequencing_genome td:nth-child(2) {
+  font-style: italic;
+}
+  </style>
+
+
+<span id = "Activity-1-Proposed" class = "top-tier-title" style="">Activity 1 Proposed sequencing strategy</span>
+
 <img class = "center-image"style="height:405px;width:860px;" src="{{ url_for ('static', filename='images/activity1_first_image.png') }}" />
 
-<br><br><br>
+
 <span id = "Activity-1-tier1" class = "tier-title">Activity 1: Tier 1</span>
-<p class = "border" style = " text-align: center;" >Sequencing genomes of Ae. markgrafii (C), Ae. comosa (M), Ae. speltoides (S), Ae. umbellulata (U), Ae. Uniaristata (N),  and Ae. Mutica (T)
+<p class = "border" style = " text-align: center;" >Sequencing genomes of Ae.  markgrafii (C), Ae.  comosa (M), Ae.  speltoides (S), Ae.  umbellulata (U), Ae.  Uniaristata (N),  and Ae.  Mutica (T)
 </p>
 <p style = "text-align: center;font-weight: 700;" >Genome size estimates by flow cytometry
 </p>
 
-<table class = "center">
+<table id="Genome_size" class = "center">
     <tr>
       <th>Species</th>
       <th>Genome</th>
@@ -31,37 +44,37 @@
       <th>1C<sup>2</sup>(Gbp)</th>
     </tr>
     <tr>
-      <td>Ae.markgrafii</td>
+      <td>Ae. markgrafii</td>
       <td>C</td>
       <td>4.84</td>
       <td>4.3&plusmn;0.013</td>
     </tr>
     <tr>
-       <td>Ae.comosa</td>
+       <td>Ae. comosa</td>
        <td>M</td>
        <td>5.53</td>
        <td>5.3&plusmn;0.014</td>
     </tr>
     <tr>
-      <td>Ae.speltoides</td>
+      <td>Ae. speltoides</td>
       <td>S</td>
       <td>5.81</td>
       <td>5.5&plusmn;0.005</td>
     </tr>
     <tr>
-      <td>Ae.umbellulata</td>
+      <td>Ae. umbellulata</td>
       <td>U</td>
       <td>5.38</td>
       <td>5.1&plusmn;0.014</td>
     </tr>
     <tr>
-      <td>Ae.uniaristata</td>
+      <td>Ae. uniaristata</td>
       <td>N</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>Ae.mutica</td>
+      <td>Ae. mutica</td>
       <td>T</td>
       <td> </td>
       <td> </td>
@@ -74,12 +87,9 @@
 
 
 
-
-<br><br><br>
-
 <span id = "Activity-1-tier2" class = "tier-title">Tier 2 Sequencing ? genomes</span>
-<br><br><br>
-<table class = "center">
+
+<table id = "two_Sequencing_genome" class = "center">
     <tr>
       <th>Accesion</th>
       <th>Species</th>
@@ -90,7 +100,7 @@
     </tr>
     <tr>
       <td>Carberry</td>
-      <td>T.aestivum</td>
+      <td>T. aestivum</td>
       <td>ABD</td>
       <td>2.2</td>
       <td>&radic;</td>
@@ -98,7 +108,7 @@
     </tr>
     <tr>
       <td>Stettler</td>
-      <td>T.aestivum</td>
+      <td>T. aestivum</td>
       <td>ABD</td>
       <td>2.2</td>
       <td>&radic;</td>
@@ -106,7 +116,7 @@
     </tr>
     <tr>
       <td>27 SHWs<sup>1</sup></td>
-      <td>T.aestivum</td>
+      <td>T. aestivum</td>
       <td>ABD</td>
       <td>1.1/1.2/2.2</td>
       <td>&radic;</td>
@@ -114,7 +124,7 @@
     </tr>
     <tr>
       <td>Canthatch</td>
-      <td>T.aestivum</td>
+      <td>T. aestivum</td>
       <td>ABD</td>
       <td>3.1</td>
       <td>&radic;</td>
@@ -122,7 +132,7 @@
     </tr>
     <tr>
       <td>RL5710</td>
-      <td>T.aestivum</td>
+      <td>T. aestivum</td>
         <td>AB</td>
         <td>3.1</td>
         <td>&radic;</td>
@@ -130,7 +140,7 @@
     </tr>
     <tr>
         <td>Stewart 63</td>
-        <td>T.durum</td>
+        <td>T. durum</td>
         <td>AB</td>
         <td>3.1</td>
         <td>&radic;</td>
@@ -138,7 +148,7 @@
     </tr>
     <tr>
         <td>DT696<sup>2</sup></td>
-        <td>T.durum</td>
+        <td>T. durum</td>
         <td>AB</td>
         <td>3.2</td>
         <td>&radic;</td>
@@ -146,7 +156,7 @@
     </tr>
     <tr>
         <td>D04X.00.003</td>
-        <td>T.durum</td>
+        <td>T. durum</td>
         <td>AB</td>
         <td>3.2</td>
         <td>&radic;</td>
@@ -154,7 +164,7 @@
     </tr>
     <tr>
         <td>13 accessions</td>
-        <td>T.turgidum ssp</td>
+        <td>T. turgidum ssp</td>
         <td>AB</td>
         <td>1.1</td>
         <td>&radic;</td>
@@ -170,7 +180,7 @@
     </tr>
     <tr>
         <td>22 NAM parents</td>
-        <td>T.aestivum</td>
+        <td>T. aestivum</td>
         <td>ABD</td>
         <td>2.2</td>
         <td>&radic;</td>
@@ -182,15 +192,14 @@
     <br><sup>2</sup> Replacement for Transcend: Assembly available based on ONT trial
   </p>
 
-<br><br><br>
+
 
 <span id = "Activity-1-tier3" class = "tier-title">Tier 3 Accessions</span>
 
-<br>
 
 <ul >
     <li>350 accessions of diploid, tetraploid and hexaploid from 23 Aegilops species and 4 Triticum species including many subspecies</li>
-    <li>Selection will be based on genetic diversity, deepening the Aegilops representation and covering the subspecies of T. aestivum and T. turgidum</li>
+    <li>Selection will be based on genetic diversity, deepening the Aegilops representation and covering the subspecies of T.  aestivum and T.  turgidum</li>
 </ul>
 
 <img class = "center-image" style="width: 80%;" src="{{ url_for ('static', filename='images/activity1_tier3_1.png') }}" />
@@ -203,17 +212,17 @@
 
 <div class="p-row">
 
-<div class="column" >
-    <p><b>Wild emmer wheat (T. dicoccoides)</b>     
+<div class="column33" >
+    <p><b>Wild emmer wheat (T.  dicoccoides)</b>     
     </p> 
   </div>
-  <div class="column">
-    <p><b>Domesticated emmer wheat (T. dicoccum)
+  <div class="column33">
+    <p><b>Domesticated emmer wheat (T.  dicoccum)
     </b>
     </p> 
   </div>
-  <div class="column">
-    <p><b>Durum wheat landraces (T. durum)
+  <div class="column33">
+    <p><b>Durum wheat landraces (T.  durum)
     </b>
     </p> 
 </div>
@@ -222,17 +231,17 @@
 
 
     <div class="p-row">
-      <div class="column" >
+      <div class="column33" >
           <p>
               186 accessions representing Fertile Crescent region where grow WEW natural populations
           </p> 
         </div>
-        <div class="column">
+        <div class="column33">
           <p>
           139 accessions from 29 countries
           </p> 
         </div>
-        <div class="column" >
+        <div class="column33" >
           <p>
           140 accessions from 39 countries
           </p> 
@@ -240,13 +249,13 @@
       </div>
 
       <div class="p-row">
-        <div class="column" >
+        <div class="column33" >
           <img  style="width:100%" class = "center-image" src="{{ url_for ('static', filename='images/activity1_tier3_map1.png') }}" />
           </div>
-          <div class="column">
+          <div class="column33">
             <img style="width:100%" class = "center-image" src="{{ url_for ('static', filename='images/activity1_tier3_map2.png') }}" /> 
           </div>
-          <div class="column" >
+          <div class="column33" >
             <img  style="width:100%" class = "center-image" src="{{ url_for ('static', filename='images/activity1_tier3_map3.png') }}" />
           </div>
         </div>
@@ -254,7 +263,7 @@
         <p style = "text-align: center; margin-top: 30px;" >
           Complements Durum Wheat Tetraploid Wheat Collection and existing exome datasets<br>
           90K analysis complete <br>
-          Sequencing completed for five accession of T. dicoccoides – existing projects, informatics pipeline
+          Sequencing completed for five accession of T.  dicoccoides – existing projects, informatics pipeline
           
         </p>
 

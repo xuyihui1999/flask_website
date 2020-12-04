@@ -1,0 +1,96 @@
+{% extends "activity_base.html" %}
+
+
+
+{% block activity1_left %}
+
+
+<li ><a href="#Activity3-Suppression">Activity 3: Suppression of Leaf Rust Resistance in Wheat</a></li>
+<li ><a href="#Positive-Epistatic-Interactions">Positive Epistatic Interactions in Wheat – Leaf Rust</a></li>
+<li ><a href="#Wild-Alleles">Wild Alleles for FHB Resistance in Tetraploid Wheat</a></li>
+ 
+{% endblock %}
+
+
+{% block activity1_right %}
+
+
+<span id = "Activity3-Suppression" class = "top-tier-title" >Activity 3: Suppression of Leaf Rust Resistance in Wheat
+</span>
+<div class="p-row">
+  <div class="column50" >
+    <ul >
+      <li>Addition of D genome from RL5710(SHW) suppresses rust resistance in Stewart 63 (4X) 
+      </li>
+      <li>Generation and initial analyses of cytogenetic stocks
+      </li>
+      <li>Phenotyping Stewart 63 x RL6089 SHW DH population
+      </li>
+      <li>Mutagenized populations generated
+      </li>
+      <br>
+      <b><li>Parents are awaiting sequencing
+        <ul>
+          <li>Tier 2- Tissues grown and sampled for DNA extraction 
+          </li>
+        </ul>
+      </li></b>
+    </ul>
+    </div>
+    <div class="column50" >
+      <img style="width:80%" class = "center-image" src="{{ url_for ('static', filename='images/Suppression_of_Leaf_Rust_Resistance.png') }}" /> 
+    </div>
+  
+  </div>
+
+
+<span id = "Positive-Epistatic-Interactions" class = "tier-title" >Positive Epistatic Interactions in Wheat – Leaf Rust
+</span>
+<p style = "text-align: center;" >
+  <span style="font-size: 21px;">Revised Workplan</span>
+  <br><br>Thatcher  (<span style="color: #4d86e2"><b>ONT Assembly in place - Pozniak</b></span>)
+</p>
+<img class = "center-image"style="width:15%" src="{{ url_for ('static', filename='images/arrow_plus_lr2a.png') }}" />
+<img class = "center-image"style="width:42%" src="{{ url_for ('static', filename='images/Positive_Epistatic_Interactions.png') }}" />
+
+
+<ul >
+  <li>The leaf rust resistance gene Lr2a provides excellent resistance when pyramided with Lr34, but almost no resistance in its absence 
+  </li>
+  <li><b>Goal</b>: Clone Lr2a to facilitate studies to understand the interaction with Lr34
+  </li>
+  <li>RL6016 is a NIL to Thatcher (+Lr2a).  An ONT assembly is available (Pozniak) from another project
+  </li>
+  <li>A large F2 population has been generated for the cross Chinese Spring/RL6016 and is now ready for fine mapping
+  </li>
+  <li>Knock-out mutants of Lr2a are available
+  </li>
+</ul>
+
+
+
+
+<span id = "Wild-Alleles" class = "tier-title">Wild Alleles for FHB Resistance in Tetraploid Wheat
+</span>
+<div class="p-row">
+  <div class="column25" >
+    <img style="width:96%; padding-top: 46px;" class = "center-image" src="{{ url_for ('static', filename='images/Wild_Alleles1.png') }}"/> 
+    </div>
+    <div class="column50" >
+      <p style="text-align: center; margin-bottom: 0%;">QFHB-cdc.5A</p>
+      <img style="width:80%" class = "center-image" src="{{ url_for ('static', filename='images/Wild_Alleles2.png') }}" /> 
+    </div>
+
+    <div class="column25" >
+      <p style="text-align: center; "><b>PROGRESS</b></p>
+      <p style="text-align: center; margin-top: 130PX;"><b>Field 2020 
+        Phenotyping</b>
+        </p>
+        <p style="text-align: center; margin-top: 130PX;"><b>Advancing
+          Irradiated Lines   </b>       
+        </p>
+    </div>
+  </div>
+
+
+        {% endblock %}
