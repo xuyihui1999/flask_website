@@ -3,12 +3,11 @@
 
 
 {% block activity1_left %}
-
-
-<li ><a href="#Activity-1-Proposed">Activity 1 Proposed sequencing strategy</a></li>
-<li ><a href="#Activity-1-tier1">Activity 1: Tier 1</a></li>
-<li ><a href="#Activity-1-tier2">Tier 2 Sequencing ? genomes</a></li>
-<li ><a href="#Activity-1-tier3">Tier 3 Accessions</a></li> 
+<ul>
+<li ><a href="#Activity-1-tier1">Tier 1: High-quality reference assembly</a></li>
+<li ><a href="#Activity-1-tier2">Tier 2: Reference guided assembly</a></li>
+<li ><a href="#Activity-1-tier3">Tier 3: Imputed assembly</a></li>
+</ul>
 {% endblock %}
 
 
@@ -24,24 +23,22 @@
 }
   </style>
 
+<h2><b>Activity 1: Harnessing the diversity of wheat</b></h2>
 
-<span id = "Activity-1-Proposed" class = "top-tier-title" style="">Activity 1 Proposed sequencing strategy</span>
-
+<p style = "text-align: center;font-weight: 700;" >Proposed genome sequecning strategy</p>
 <img class = "center-image"style="height:405px;width:860px;" src="{{ url_for ('static', filename='images/activity1_first_image.png') }}" />
 
-
-<span id = "Activity-1-tier1" class = "tier-title">Activity 1: Tier 1</span>
-<p class = "border" style = " text-align: center;" >Sequencing genomes of Ae.  markgrafii (C), Ae.  comosa (M), Ae.  speltoides (S), Ae.  umbellulata (U), Ae.  Uniaristata (N),  and Ae.  Mutica (T)
+<span id = "Activity-1-tier1" class = "tier-title" style="width: 100%;margin-bottom: 20px;">Tier 1: High-quality reference assembly</span>
+<p style = " text-align: left;" >Producing high-quality <i>de novo</i> genome sequences for six novel genomes of <i>Ae. markgrafii</i> (C), <i>Ae. comosa</i> (M), <i>Ae. speltoides</i> (S), <i>Ae. umbellulata</i> (U), <i>Ae. Uniaristata</i> (N),  and <i>Ae. Mutica</i> (T).
 </p>
-<p style = "text-align: center;font-weight: 700;" >Genome size estimates by flow cytometry
-</p>
+<p style = "text-align: center;font-weight: 700;" >Genome size estimates by flow cytometry</p>
 
 <table id="Genome_size" class = "center">
     <tr>
       <th>Species</th>
       <th>Genome</th>
-      <th>1C<sup>1</sup>(Gbp)</th>
-      <th>1C<sup>2</sup>(Gbp)</th>
+      <th>1C<sup>1</sup> (Gbp)</th>
+      <th>1C<sup>2</sup> (Gbp)</th>
     </tr>
     <tr>
       <td>Ae. markgrafii</td>
@@ -81,13 +78,17 @@
     </tr>
   </table>
   
-  <p style = "font-size: 15px; font-weight: 700; padding-left: 150px;" ><sup>1</sup> Eilam et al. (2007, 2008)
+<p style = "font-size: 15px; font-weight: 500; padding-left: 150px;" ><sup>1</sup> <a href="https://pubmed.ncbi.nlm.nih.gov/18059548/">Eilam, T., et al., Genome size and genome evolution in diploid Triticeae species. Genome, 2007. 50: 1029-37.</a><br>
+    <a href="https://cdnsciencepub.com/doi/10.1139/G08-043">Eilam, T., et al., Nuclear DNA amount and genome downsizing in natural and synthetic allopolyploids of the genera Aegilops and Triticum. Genome, 2008. 51: 616-27.</a>
     <br><sup>2</sup> Our estimates
   </p>
 
 
 
-<span id = "Activity-1-tier2" class = "tier-title">Tier 2 Sequencing ? genomes</span>
+<span id = "Activity-1-tier2" class = "tier-title" style="width: 100%;margin-bottom: 20px;">Tier 2: Reference guided assembly</span>
+<p style = " text-align: left;" >Generating mid-coverage assemblies of at least 50 accessions using 30× read-depth of Oxford Nanopore, 10× read-depth of 10X Genomics and 10× read-depth of Illumina short reads technologies (Table 1.2) to enable the identification of single nucleotide variation (SNV), PAV and CNV, and a large proportion of structural variants
+</p>
+<p style = "text-align: center;font-weight: 700;" >Mid-coverage assemblies of at least 50 accessions</p>
 
 <table id = "two_Sequencing_genome" class = "center">
     <tr>
@@ -100,7 +101,7 @@
     </tr>
     <tr>
       <td>Carberry</td>
-      <td>T. aestivum</td>
+        <td>T. aestivum</td>
       <td>ABD</td>
       <td>2.2</td>
       <td>&radic;</td>
@@ -192,80 +193,58 @@
     <br><sup>2</sup> Replacement for Transcend: Assembly available based on ONT trial
   </p>
 
-
-
-<span id = "Activity-1-tier3" class = "tier-title">Tier 3 Accessions</span>
-
-
+<span id = "Activity-1-tier3" class = "tier-title" style="width: 100%;margin-bottom:20px;">Tier 3: Imputed assembly</span>
 <ul >
+    <li>perform low-coverage sequencing (~1×) of more than 350 accessions using standard Illumina short read sequencing with the aim to define haplotypes and increase the potential to identify rare alleles.</li>
     <li>350 accessions of diploid, tetraploid and hexaploid from 23 Aegilops species and 4 Triticum species including many subspecies</li>
-    <li>Selection will be based on genetic diversity, deepening the Aegilops representation and covering the subspecies of T.  aestivum and T.  turgidum</li>
+        <p style = "text-align: center;font-weight: 700;" >Genetic diversity of 350 accessions</p>
+        <img class = "center-image" style="width: 80%;" src="{{ url_for ('static', filename='images/activity1_tier3_1.png') }}" />
+        <img class = "center-image" style="width: 80%;" src="{{ url_for ('static', filename='images/activity1_tier3_2.png') }}" />
+
+    <li>Selection will be based on genetic diversity, deepening the Aegilops representation and covering the subspecies of <i>T. aestivum</i> and <i>T. turgidum</i></li>
+    <li>Selection of tetraploid species</li>
+        <br>
+        <div class="p-row">
+            <div class="column33" >
+                <p><b>Wild emmer wheat (<i>T. dicoccoides</i>)</b></p>
+            </div>
+            <div class="column33">
+                <p><b>Domesticated emmer wheat (<i>T. dicoccum</i>)</b> </p>
+            </div>
+            <div class="column33">
+                <p><b>Durum wheat landraces (<i>T. durum</i>)</b></p>
+            </div>
+        </div>
+        <div class="p-row">
+            <div class="column33" >
+                <p>
+                186 accessions representing Fertile Crescent region where grow WEW natural populations
+                </p>
+            </div>
+            <div class="column33">
+                <p>
+                139 accessions from 29 countries
+                </p>
+            </div>
+            <div class="column33" >
+                <p>
+                140 accessions from 39 countries
+                </p>
+            </div>
+        </div>
+
+        <div class="p-row">
+            <div class="column33" >
+                <img  style="width:100%" class = "center-image" src="{{ url_for ('static', filename='images/activity1_tier3_map1.png') }}" />
+            </div>
+            <div class="column33">
+                <img style="width:100%" class = "center-image" src="{{ url_for ('static', filename='images/activity1_tier3_map2.png') }}" />
+            </div>
+            <div class="column33" >
+                <img  style="width:100%" class = "center-image" src="{{ url_for ('static', filename='images/activity1_tier3_map3.png') }}" />
+            </div>
+        </div>
+
 </ul>
-
-<img class = "center-image" style="width: 80%;" src="{{ url_for ('static', filename='images/activity1_tier3_1.png') }}" />
-<br><br>
-<img class = "center-image" style="width: 80%;" src="{{ url_for ('static', filename='images/activity1_tier3_2.png') }}" />
-
-<br><br><br>
-<span class="tier-title">Tier 3 Tetraploid Species Selection</span>
-<br>
-
-<div class="p-row">
-
-<div class="column33" >
-    <p><b>Wild emmer wheat (T.  dicoccoides)</b>     
-    </p> 
-  </div>
-  <div class="column33">
-    <p><b>Domesticated emmer wheat (T.  dicoccum)
-    </b>
-    </p> 
-  </div>
-  <div class="column33">
-    <p><b>Durum wheat landraces (T.  durum)
-    </b>
-    </p> 
-</div>
-
-</div>
-
-
-    <div class="p-row">
-      <div class="column33" >
-          <p>
-              186 accessions representing Fertile Crescent region where grow WEW natural populations
-          </p> 
-        </div>
-        <div class="column33">
-          <p>
-          139 accessions from 29 countries
-          </p> 
-        </div>
-        <div class="column33" >
-          <p>
-          140 accessions from 39 countries
-          </p> 
-        </div>
-      </div>
-
-      <div class="p-row">
-        <div class="column33" >
-          <img  style="width:100%" class = "center-image" src="{{ url_for ('static', filename='images/activity1_tier3_map1.png') }}" />
-          </div>
-          <div class="column33">
-            <img style="width:100%" class = "center-image" src="{{ url_for ('static', filename='images/activity1_tier3_map2.png') }}" /> 
-          </div>
-          <div class="column33" >
-            <img  style="width:100%" class = "center-image" src="{{ url_for ('static', filename='images/activity1_tier3_map3.png') }}" />
-          </div>
-        </div>
-
-        <p style = "text-align: center; margin-top: 30px;" >
-          Complements Durum Wheat Tetraploid Wheat Collection and existing exome datasets<br>
-          90K analysis complete <br>
-          Sequencing completed for five accession of T.  dicoccoides – existing projects, informatics pipeline
-          
-        </p>
-
 
         {% endblock %}

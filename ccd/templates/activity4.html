@@ -1,29 +1,40 @@
 {% extends "activity_base.html" %}
 
-
-
 {% block activity1_left %}
 
-
-<li ><a href="#Activity-4-Integrating-Digital-Phenotyping">Activity 4: Integrating Digital Phenotyping with Genomic-enabled Prediction</a></li>
-<li ><a href="#Empirical-Phenotyping">“Empirical” Phenotyping of the NAM Population (Three Environments)</a></li>
-<li ><a href="#Digital-Phenotyping">“Digital” Phenotyping of the NAM Population (Three Environments)
+<li ><a href="#Activity4.1">Activity 4.1. Integrating Digital Phenotyping with Genomic-enabled Prediction</a></li>
+<li ><a href="#Activity4.2">Activity 4.2. Characterizing FHB Infection using HTP and Deep Learning</a></li>
 </a></li>
-<li ><a href="#GERMPLASM-FIELD">GERMPLASM FIELD EVALUATIONS</a></li>
 {% endblock %}
 
 
 {% block activity1_right %}
 
 
-<span id = "Activity-4-Integrating-Digital-Phenotyping" class = "top-tier-title" >
-  Activity 4: Integrating Digital Phenotyping with Genomic-enabled Prediction
+<h2><b>Activity 4: Delivery of Pre-breeding Germplasm to Wheat Breeding</b></h2>
+<br>
+
+<span id = "Activity4.1" class = "tier-title" >Activity 4.1. Integrating Digital Phenotyping with Genomic-enabled Prediction
 </span>
 
-<p><b>CanNAM Population</b><br><br>
-  Long term genetics & applied research resource
-  Diversity for traits impacting Canadian wheat
-  Whole NAM population analysis & targeted sub-pop analysis</p>
+<ul>
+  <li>
+    Phenotyping in breeding programs is evolving away from the concept of direct measurement of target traits
+    and moving towards the digital inference of productivity using multi-faceted approaches.
+    In particular, physiological high throughput phenotyping (HTP) measurements can predict grain yield,
+    which may be particularly useful in early generation pre-breeding programs.
+    We propose a novel application where digital phenotypes of our NAM population will be treated solely
+    as empirical data in a machine learning-based genomic prediction approach.
+    We will apply digital phenotyping using multispectral information to the SHW-derived NAM population
+    that will act as a GS training population using the dense genotyping data generated in Activity 2.2.
+  </li>
+  <li>
+    Establish and validate standardized methodologies for HTP in wheat that can be later applied to breeding programs
+    and cultivar assessments in registration trials
+  </li>
+</ul>
+
+<p><b>CanNAM Population</b></p>
 
 <div class="p-row">
   <div class="column33" >
@@ -49,9 +60,7 @@
   </div>
 
 
-<span id = "Empirical-Phenotyping" class = "tier-title" >“Empirical” Phenotyping of the NAM Population (Three Environments)
-</span>
-
+<H3><center>Completed and ongoing phenotyping of the spring and winter diversity panels </center></H3>
 <table class = "center" >
   <tr>
     <th>Trait</th>
@@ -160,45 +169,43 @@
   </tr>
 </table>
 
-  
-
-
-
-
-<p style = "padding-top: 60px;"><span id = "Digital-Phenotyping" class = "t-title">“Digital” Phenotyping of the NAM Population (Three Environments)   
-</span></p>
-<p style = "padding-bottom: 70px;"><b>All locations were scanned at one week intervals (3 day intervals at heading)</b></p>
-
-
-
-
+<br><br>
+<h3><center><b>“Digital” Phenotyping of the NAM Population (Three Environments)</b></center></h3>
+<h4><center><b>All locations were scanned at one week intervals (3 day intervals at heading)</b></h4>
 <div class="p-row">
   <div class="column20" style = "padding-top: 20px;" >
-    <p style = "text-align: center;"><b>PhaseOne<br> 
+    <p style = "text-align: center;"><b>PhaseOne<br>
       RGB camera
       </b></p>
     </div>
     <div class="column80" >
-      <img style="width:80%" class = "center-image" src="{{ url_for ('static', filename='images/Digital_Phenotyping1.png') }}" /> 
+      <img style="width:80%" class = "center-image" src="{{ url_for ('static', filename='images/Digital_Phenotyping1.png') }}" />
     </div>
   </div>
 
   <div class="p-row">
     <div class="column20" style = "padding-top: 20px;" >
-      <p style = "text-align: center;"><b>MicaSense Rededge 3<br> 
+      <p style = "text-align: center;"><b>MicaSense Rededge 3<br>
         Multispectral sensor
         </b></p>
       </div>
       <div class="column80" >
-        <img style="width:80%" class = "center-image" src="{{ url_for ('static', filename='images/Digital_Phenotyping2.png') }}" /> 
+        <img style="width:80%" class = "center-image" src="{{ url_for ('static', filename='images/Digital_Phenotyping2.png') }}" />
       </div>
     </div>
 
 
-    <span id = "GERMPLASM-FIELD" class = "tier-title">GERMPLASM FIELD EVALUATIONS
-    </span>
 
-    <div class="p-row">
+<br><br>
+<span id = "Activity4.2" class = "tier-title" >Activity 4.2. Characterizing FHB Infection using HTP and Deep Learning</span>
+<br><br>
+<ul>
+  <li>FHB incidence and severity will be evaluated in FHB nurseries located in Morden (Manitoba) and near Saskatoon (Saskatchewan). </li>
+  <li>HTP methodologies in wheat for disease evaluation, with particular emphasis on FHB, rusts and powdery mildew</li>
+</ul>
+
+<h3><center><b>Germplasm field evaluation (FHB Nursery, Morden, MB)</b></center></h3>
+<div class="p-row">
       <div class="column50" style = "padding-top: 20px;" >
         <p style = "text-align: center;">Spring Diversity Panel
         </p>
@@ -220,9 +227,6 @@
       </div>     
     </div>
 
-    
-    <p style = "text-align: center;">FHB Nursery, Morden, MB
-    </p>
     
     <video width="640" height="360" controls>
       <source src="{{ url_for ('static', filename='video/field_video1.mp4') }}" type="video/mp4">

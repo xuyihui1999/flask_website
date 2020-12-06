@@ -5,9 +5,8 @@
 {% block activity1_left %}
 
 
-<li ><a href="#Activity2-Transforming-Wheat">Activity 2: Transforming wild emmer wheat</a></li>
-<li ><a href="#Activity2-ACCESSING-D">Activity 2: ACCESSING D GENOME VARIATION
-</a></li>
+<li ><a href="#Activity2.1">Activity 2.1: Recreating adaptive traits in exotic germplasm</a></li>
+<li ><a href="#Activity2.2">Activity 2.2: Accessing D genome variation</a></li>
 
 {% endblock %}
 
@@ -19,44 +18,119 @@
   
   </style>
 
-<span id = "Activity2-Transforming-Wheat" class="top-tier-title">
-    Activity 2: Transforming wild emmer wheat using GRF-GIF chimeras that enhance regeneration efficiency
-</span>
+<h2> <b>Activity 2: Accessing Quantitative Traits from Exotic Germplasm to Support Pre-breeding</b></h2>
+<br>
 
+<span id = "Activity2.1" class = "tier-title" style="width:100%;margin-bottom:20px;">Activity 2.1. Recreating Adaptive Traits in Exotic Germplasm to Support Pre-breeding
+</span>
+<ul>
+    <li>
+        Utilize CRISPR-Cas9 genome-editing technologies to domesticate exotic genetic resources prior to hybrid development.
+        We propose to design and evaluate methods to identify genetic resources with high general combining ability (GCA)
+        by combining the methods outlined above: gene editing and hybrid wheat. We propose to efficiently recreate
+        adaptive traits in unadapted germplasm using the CRISPR-Cas9 technology, with the aim of “adapting” this
+        germplasm for field evaluation in F1 hybrids of elite × exotic crosses. Adaptation traits, important for
+        wheat in Canada and elsewhere, and their corresponding genes to be edited are listed as follows:
+    </li>
+
+<p style = "text-align: center;font-weight: 700;" >Genome editing targets for <i>de novo</i> domestication</p>
+
+<table id = "two_Sequencing_genome" class = "center">
+    <tr>
+    <th>Trait</th>
+    <th>Phenotype</th>
+    <th>Gene</th>
+    <th>Allele</th>
+    <th>Sequence variation</th>
+    <th>Reference</th>
+    </tr>
+    <tr>
+        <td>Reduced plant height</td>
+        <td>Short vs. tall</td>
+        <td><i>Rht-B1</i></td>
+        <td><i>Rht-B1b</i> (<i>Rht1</i>)</td>
+        <td>SNP</td>
+        <td><a href="https://pubmed.ncbi.nlm.nih.gov/10421366/">Peng et al 1999 <sup>1</sup></a></td>
+    </tr>
+    <tr>
+        <td>Photoperiod response</td>
+        <td>Insensitive vs. sensitive - Flowering time</td>
+        <td><i>Ppd-A1</i></td>
+        <td>GS100, GS105</td>
+        <td>1.1 kb deletion</td>
+        <td><a href="https://pubmed.ncbi.nlm.nih.gov/18839130/">Wilhelm et al 2009 <sup>2</sup></a></td>
+    </tr>
+    <tr>
+        <td>Vernalization response</td>
+        <td>Insensitive vs. sensitive - Flowering time</td>
+        <td><i>VRN2</i></td>
+        <td>Loss of function</td>
+        <td>SNPs and deletions</td>
+        <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4737501/">Yan et al 2004 <sup>3</sup></a></td>
+    </tr>
+    <tr>
+        <td>Grain threshability</td>
+        <td>Naked vs. hulled grains – Free-threshing</td>
+        <td><i>Q</i> (<i>WAP2</i>)</td>
+        <td><i>Q</i></td>
+        <td>I329V amino acid substitution</td>
+        <td><a href="https://pubmed.ncbi.nlm.nih.gov/16172507/">Simons et al 2006 <sup>4</sup></a></td>
+    </tr>
+</table>
+<div style = "font: 8px; padding-left: 50px;" >
+
+        <sup>1</sup> <a href="https://pubmed.ncbi.nlm.nih.gov/10421366/">Peng, J., et al., 'Green revolution' genes encode mutant gibberellin response modulators. Nature, 1999. 400: 256-61.</a><br>
+        <sup>2</sup> <a href="https://pubmed.ncbi.nlm.nih.gov/18839130/">Wilhelm, E.P., A.S. Turner, and D.A. Laurie, Photoperiod insensitive Ppd-A1a mutations in tetraploid wheat (<i>Triticum durum</i> Desf.). Theor Appl Genet, 2009. 118: 285-94.</a><br>
+        <sup>3</sup> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4737501/">Yan, L., et al., The Wheat VRN2 gene is a flowering repressor down-regulated by vernalization. Science, 2004. 303: 1640-4.</a><br>
+        <sup>4</sup> <a href="https://pubmed.ncbi.nlm.nih.gov/16172507/">Simons, K.J., et al., Molecular characterization of the major wheat domestication gene Q. Genetics, 2006. 172: 547-55.</a><br>
+
+</div>
+<br><br>
+
+    <p style = "text-align: center;font-weight: 700;" >Schematic illustration of the multiplex gene editing construct to be used for creating TetraOM and the strategy for its use in generation of “adapted” exotic germplasm</p>
+<img class = "center-image" style="width: 100%;" src="{{ url_for ('static', filename='images/activity2.1_2.png') }}" />
+
+
+
+    <li>Transforming wild emmer wheat using GRF-GIF chimeras that enhance regeneration efficiency</li>
+</ul>
 <div class="p-row">
-    <div class="column50" >
-      <img  style="width:80%" class = "center-image" src="{{ url_for ('static', filename='images/activity2_wild_wheat1.png') }}" />
+    <div class="column25" >
+      <img  style="width:100%" class = "center-image" src="{{ url_for ('static', filename='images/activity2_wild_wheat1.png') }}" />
       </div>
-      <div class="column50">
-        <img style="width:80%" class = "center-image" src="{{ url_for ('static', filename='images/activity2_wild_wheat2.png') }}" /> 
+      <div class="column25">
+        <img style="width:100%" class = "center-image" src="{{ url_for ('static', filename='images/activity2_wild_wheat2.png') }}" />
       </div>
-    
+        <div class="column25" >
+          <img style="width: 100%;" class = "center-image" src="{{ url_for ('static', filename='images/activity2_wild_wheat3.png') }}" />
+        </div>
+      
+        <div class="column25" >
+          <img style="width: 100%;" class = "center-image" src="{{ url_for ('static', filename='images/activity2_wild_wheat4.png') }}" />
+        </div>
+      
+      </div>
+
+    <div style = "font: 8px; padding-left: 50px;" >
+        Protocol described in <br>
+        <a href="https://www.nature.com/articles/s41587-020-0703-0">Debernardi, J.M., Tricoli, D.M., Ercoli, M.F. et al. A GRF–GIF chimeric protein improves the regeneration efficiency of transgenic plants. Nat Biotechnol 2020, 38, 1274–1279.</a>
     </div>
 
-    <div class="p-row" >
-      
-        <div class="column50" >
-          <img style="width: 70%;" class = "center-image" src="{{ url_for ('static', filename='images/activity2_wild_wheat3.png') }}" />
-        </div>
-      
-        <div class="column50" >
-          <img style="width: 76%;" class = "center-image" src="{{ url_for ('static', filename='images/activity2_wild_wheat4.png') }}" />
-        </div>
-      
-      </div>
-
-    <p style = "text-align: center;" >
-      Protocol described in Debernardi et al. 2020
-    </p>
+    <br><br>
 
 
-
-
-
-<span id = "Activity-1-tier2" class = "tier-title">Activity 2: ACCESSING D GENOME VARIATION
+<span id = "Activity2.2" class = "tier-title" style="width:100%;margin-bottom:20px;">Activity 2.2: Accessing D genome variation
 </span>
 
-<img class = "center-image" style="width: 60%;" src="{{ url_for ('static', filename='images/activity2_accessing_d.png') }}" />
+<p>Developing a strategy to predict combining ability based on genome-wide genotypic data that will better inform
+    the selection of the tetraploid and diploid parents for SHW crosses and of the subsequent elite parents
+    for backcrossing.
+</p>
+
+<p style = "text-align: center;font-weight: 700;" >Strategy of accessing D genome variaon</p>
+<img class = "center-image" style="width: 50%;" src="{{ url_for ('static', filename='images/activity2_accessing_d.png') }}" />
+
+<p style = "text-align: center;font-weight: 700;" >Description of synthetic hexaploid wheat-derived germplasm</p>
 
 <table class = "center">
     <tr>
@@ -126,15 +200,5 @@
       <td>BC<sub>1</sub>F<sub>6</sub></td>
     </tr>
   </table>
-  
-  
-
-        <p style = "text-align: center; margin-top: 30px;" >
-          Complements Durum Wheat Tetraploid Wheat Collection and existing exome datasets<br>
-          90K analysis complete <br>
-          Sequencing completed for five accession of T. dicoccoides – existing projects, informatics pipeline
-          
-        </p>
-
 
         {% endblock %}

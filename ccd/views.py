@@ -245,6 +245,12 @@ def Progress():
    
    return render_template('Progress.html')
 
+
+@app.route('/activity_overview', methods=['GET', 'POST'])
+def activity_overview():
+    return render_template('activity_overview.html')
+
+
 @app.route('/activity1',methods=['GET','POST'])
 def activity1():
    
