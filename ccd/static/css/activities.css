@@ -137,8 +137,14 @@ font-size: 16px;
 a.table-link{
   text-decoration: underline;
   color: rgb(79, 156, 34);
+  font-size: 16px;
 }
 
+a.table-column-link{
+  text-decoration: underline;
+  color: rgb(79, 156, 34);
+  
+}
 .left-div ul {
 list-style-type: none;
 margin: 0;
