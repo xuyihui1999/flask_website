@@ -10,15 +10,13 @@ p {
 
 .page-body {
   position: relative;
-  
-  
 }
 
 table {
   font-family: arial, sans-serif;
   
   border-collapse: collapse;
-  width: 90%;
+  width: 100%;
   
   border-top: 2px solid rgb(122, 180, 250);
   border-bottom: 2px solid rgb(122, 180, 250);
@@ -83,9 +81,10 @@ tr:nth-child(even) {
   font-size: 20px;
 }
 
-span .tier-title{
-  background-color: #b8ff33;
-  font-size: 20px;
+span.tier-title{
+  background-color: #5ccc52;
+  padding-left: 5px;
+  font-size: 23px;
   font-weight: 900;
   color:rgb(255, 255, 255) ;
   display:inline-block;
@@ -132,6 +131,12 @@ width:86%;
 
 li a{
 font-size: 16px;
+
+}
+
+a.table-link{
+  text-decoration: underline;
+  color: rgb(79, 156, 34);
 }
 
 .left-div ul {

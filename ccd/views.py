@@ -52,6 +52,41 @@ def news_delete():
             return redirect(url_for('main'))
     return render_template('news_delete.html',news=news)
 
+
+@app.route('/sign_up',methods=['GET','POST'])
+def sign_up():
+   form = SignUpForm()
+   if request.method == 'POST':
+      if form.validate_on_submit():
+        new = UserAccount()
+        form.populate_obj(new)
+        # Check if the member already exists in the db
+        exists = ROC_members.query.filter_by(email=new.email).first()
+        # If it does not exist, add it to the db
+        if exists is None:
+          db.session.add(new)
+          db.session.commit()
+   
+   return render_template('sign_up.html',form=form)
+
+@app.route('/roc_add',methods=['GET','POST'])
+def roc_add():
+    if not session.get('logged_in') :
+      return redirect(url_for('login')) #user is not logged in sends user to login screen Kody 2018-01-08
+    form = ROC_memberAddForm()
+    if request.method == 'POST':
+      if form.validate_on_submit():
+        new = ROC_members()
+        form.populate_obj(new)
+        # Check if the member already exists in the db
+        exists = ROC_members.query.filter_by(email=new.email).first()
+        # If it does not exist, add it to the db
+        if exists is None:
+          db.session.add(new)
+          db.session.commit()
+          return redirect(url_for('roc_member'))
+    return render_template('roc_add.html',form=form)
+
 # Login / Logout ---------------------------------------------------------------
 
 @app.route('/login',methods=['GET','POST'])
@@ -437,23 +472,6 @@ def collab_add():
     return render_template('collab_add.html',form=form)
 
 
-@app.route('/roc_add',methods=['GET','POST'])
-def roc_add():
-    if not session.get('logged_in') :
-      return redirect(url_for('login')) #user is not logged in sends user to login screen Kody 2018-01-08
-    form = ROC_memberAddForm()
-    if request.method == 'POST':
-      if form.validate_on_submit():
-        new = ROC_members()
-        form.populate_obj(new)
-        # Check if the member already exists in the db
-        exists = ROC_members.query.filter_by(email=new.email).first()
-        # If it does not exist, add it to the db
-        if exists is None:
-          db.session.add(new)
-          db.session.commit()
-          return redirect(url_for('roc_member'))
-    return render_template('roc_add.html',form=form)
 
 @app.route('/research_team_add',methods=['GET','POST'])
 def research_team_add():

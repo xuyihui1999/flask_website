@@ -366,12 +366,20 @@ mark { background-color:#fff; color:black; }
       <div class="vertical-line w3-dropdown-hover"> </div>
       
     <li><a class = "menu-link" href="{{ url_for("links") }}">Links</a></li>
-      
+
+    
       {% if session.logged_in %}
     <li style = "float:right;"><a class = "menu-link" href="{{ url_for("logout") }}" class="w3-right "><b>Log Out</b></a></li>
+    
       {% else %}
     <li style = "float:right;"><a class = "menu-link" href="{{ url_for("login") }}" class="w3-right "><b>Log In</b></a></li>
+    
       {% endif %}
+
+      <div class="vertical-line w3-dropdown-hover w3-right"> </div>
+
+      <li style = "float:right;"><a class = "menu-link" href="{{ url_for("sign_up") }}" class="w3-right "><b>Sign Up</b></a></li>
+    
     </ul>
     </div> <!--row-->
 

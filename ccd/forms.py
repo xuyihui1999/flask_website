@@ -5,8 +5,9 @@ Forms
 # Imports ---------------------------------------------------------------------
 
 from flask_wtf import FlaskForm
-from wtforms import TextField, TextAreaField, PasswordField, SubmitField
-from wtforms.validators import DataRequired, ValidationError
+from wtforms import TextField, TextAreaField, PasswordField, SubmitField,BooleanField
+from wtforms.validators import DataRequired, ValidationError, InputRequired,Email,Length
+from wtforms import validators
 
 # Setup -----------------------------------------------------------------------
 
@@ -40,6 +41,7 @@ class CollabAddForm(FlaskForm):
   submit = SubmitField("Save")
 
 class ROC_memberAddForm(FlaskForm):
+  id = TextField("Id")
   name = TextField("Name")
   
   title = TextField("Title")
@@ -49,6 +51,7 @@ class ROC_memberAddForm(FlaskForm):
   submit = SubmitField("Save")
 
 class Research_TeamAddForm(FlaskForm):
+  id = TextField("Id")
   name = TextField("Name")
   
   title = TextField("Title")
@@ -88,9 +91,11 @@ class LinkAddForm(FlaskForm):
 
 
 class LoginForm(FlaskForm):
+  #change login title
     username = TextField("Username")
 
     password = PasswordField("Password")
+    remember_me = BooleanField("Remember me")
     submit = SubmitField("Login")
 
     def validate_username(self, field):
@@ -101,6 +106,20 @@ class LoginForm(FlaskForm):
         if field.data != PASSWORD:
             raise ValidationError("Invalid password")
 
+class SignUpForm(FlaskForm):
+  #change login title
+    email = TextField("Email", validators=[InputRequired(), Length(min=5, max=20),DataRequired(message="email should be correct")])
+    username = TextField("username", validators=[InputRequired(), Length(min=5, max=20),DataRequired(message="user name should have more than 4 characters")])
+    password = PasswordField("Password", validators=[InputRequired(), Length(min=5, max=20),DataRequired(message="password should have more than 4 characters")])
+    ReEnterPassword = PasswordField("Re-enter Password")
+    
+    submit = SubmitField("Summit")
+
+    def validate_password(self, field1, field2):
+        if field1.data != field2.data:
+            raise ValidationError("the passwords you entered must be the same")
+
+    
 
 class MilestoneAddForm(FlaskForm):
   milestone_id = TextField("Milestone ID")

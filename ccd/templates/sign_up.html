@@ -6,7 +6,7 @@
 
   <header class="w3-container w3-center">
     
-    <h2><Center><b>ADMIN LOG IN</b></Center></h2>
+    <h2><Center><b>Sign Up</b></Center></h2>
   </header>
 
   <div class="w3-container w3-white">
@@ -14,12 +14,14 @@
     <form method="post">
     {{ form.hidden_tag() }}
       <dl>
+        <dt>{{ form.email.label }}:
+        <dt>{{ form.email }}
         <dt>{{ form.username.label }}:
         <dt>{{ form.username }}
         <dt>{{ form.password.label }}:
         <dt>{{ form.password }}
-        <dt>{{ form.remember_me.label }}:
-        <dt>{{ form.remember_me }}
+        <dt>{{ form.ReEnterPassword.label }}:
+        <dt>{{ form.ReEnterPassword }}
         <br/>
         <br/>
         <dt>{{ form.submit }}
