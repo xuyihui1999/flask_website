@@ -5,9 +5,11 @@ Forms
 # Imports ---------------------------------------------------------------------
 
 from flask_wtf import FlaskForm
-from wtforms import TextField, TextAreaField, PasswordField, SubmitField,BooleanField
-from wtforms.validators import DataRequired, ValidationError, InputRequired,Email,Length
+from wtforms import TextField, TextAreaField, PasswordField, SubmitField,BooleanField, widgets
+from wtforms.validators import DataRequired, ValidationError, InputRequired,Email,Length,EqualTo
 from wtforms import validators
+from models import *
+from wtforms.fields import simple, core
 
 # Setup -----------------------------------------------------------------------
 
@@ -107,16 +109,34 @@ class LoginForm(FlaskForm):
             raise ValidationError("Invalid password")
 
 class SignUpForm(FlaskForm):
+
+  
   #change login title
-    email = TextField("Email", validators=[InputRequired(), Length(min=5, max=20),DataRequired(message="email should be correct")])
-    username = TextField("username", validators=[InputRequired(), Length(min=5, max=20),DataRequired(message="user name should have more than 4 characters")])
-    password = PasswordField("Password", validators=[InputRequired(), Length(min=5, max=20),DataRequired(message="password should have more than 4 characters")])
-    ReEnterPassword = PasswordField("Re-enter Password")
+    email = TextField("Email", validators=[InputRequired()])
+    
+    username = TextField("username", validators=[InputRequired(), Length(min=5, max=20, message='user name should have more than 4\
+       characters')], id="username")
+    
+    password = simple.PasswordField("Password", validators=[InputRequired(), Length(min=5, max=20, message='password should have more than 4 \
+      characters'), EqualTo('ReEnterPassword', message="Passwords don't match")], id="password", widget = widgets.PasswordInput(), render_kw= {'class': 'form-control'})
+    
+    ReEnterPassword = simple.PasswordField("Re-enter Password", validators=[validators.DataRequired(message='please enter password'),\
+    validators.EqualTo('password', message='please enter the same password')], widget = widgets.PasswordInput(), render_kw= {'class': 'form-control'})
+    
     
     submit = SubmitField("Summit")
 
-    def validate_password(self, field1, field2):
-        if field1.data != field2.data:
+    def validate_email(self, field):
+        if UserAccount.query.filter_by(email=field.data).first():
+            raise ValidationError('email is already exist')
+
+
+    def validate_username(self, field):
+        if UserAccount.query.filter_by(username=field.data).first():
+            raise ValidationError('username is already exist')
+
+    def validate_reenter_password(self, password, ReEnterPassword):
+        if password.data != ReEnterPassword.data:
             raise ValidationError("the passwords you entered must be the same")
 
     

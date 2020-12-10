@@ -409,7 +409,8 @@ class RDC(db.Model):
         def __repr__(self):
                 return '<RDC %r>' % self.rdc
 
-'''database for user account information table(UserAccount).
+'''
+database for user account information table(UserAccount).
 '''
 class UserAccount(db.Model):
         email = db.Column(db.String(100), primary_key=True)

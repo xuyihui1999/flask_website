@@ -3,7 +3,7 @@ Views
 '''
 
 # Imports ---------------------------------------------------------------------
-
+import re
 from flask import request, session, redirect, url_for, render_template, flash
 from sqlalchemy.sql import text
 from forms import *
@@ -53,20 +53,61 @@ def news_delete():
     return render_template('news_delete.html',news=news)
 
 
+def validate_signup(email,username,password1,password2):
+      user = UserAccount.query.filter(UserAccount.email == email).first()
+      email_format = r'^[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){0,4}@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){0,4}$'
+      if password2:
+        if user:
+          
+          return 'user already exists'
+        else:
+          if len(username) < 5:
+            
+            return 'user name should have more than 4 characters'
+
+          elif not (re.match(email_format,email)):
+            return 'email format should be correct'
+
+          elif password1 != password2:
+            
+            return 'passwords should be the same'
+          
+          elif len(password1) < 5:
+            return 'password should have more than 4 characters'
+          
+          else:
+            return 'success!'
+
+      else:
+        return 'please fill out re-enetr password'
+
+
 @app.route('/sign_up',methods=['GET','POST'])
 def sign_up():
    form = SignUpForm()
    if request.method == 'POST':
+      
+      email = request.form.get('email')
+      username = request.form.get('username')
+      password1 = request.form.get('password')
+      password2 = request.form.get('ReEnterPassword')
+
+      message = validate_signup(email, username, password1, password2)
+      flash(message)
+
+
       if form.validate_on_submit():
         new = UserAccount()
         form.populate_obj(new)
+        
+        flash(message)
         # Check if the member already exists in the db
-        exists = ROC_members.query.filter_by(email=new.email).first()
+        exists = UserAccount.query.filter_by(email=new.email).first()
         # If it does not exist, add it to the db
         if exists is None:
           db.session.add(new)
           db.session.commit()
-   
+          return render_template('sign_up_success.html')
    return render_template('sign_up.html',form=form)
 
 @app.route('/roc_add',methods=['GET','POST'])

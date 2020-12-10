@@ -10,7 +10,41 @@
   </header>
 
   <div class="w3-container w3-white">
+
+    <!--
     {% if form.errors %}<p class=error>Invalid username or password.{% endif %}
+    
+
+    {% for field in form if (field.widget.input_type !='hidden') and (field.label != Summit) %}
+    <p>{{field.label}}
+      <br>
+      {{field}}
+      <span>
+        {% if field.errors %}
+          {% for error in field.errors %}
+            {{error}}
+          {% endfor%}
+        {% endif%}
+      </span>
+    </p>
+    {% endfor%}
+</span>
+
+
+
+{% if form.errors %}<p class=error>Invalid username or password.{% endif %}
+ --> 
+  {% if form.errors %}
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <p style = "color:red" class=error>{{message}}
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+  
+  {% endif %}
+
     <form method="post">
     {{ form.hidden_tag() }}
       <dl>
