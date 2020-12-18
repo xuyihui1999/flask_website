@@ -4,4 +4,17 @@
 
 <h2><Center><b>Data Archive</b></Center></h2>
 
+
+<br>
+
+{% if session.logged_in %}
+<a href="{{ url_for("data_archive_portal") }}" class="w3-button w3-large w3-blue">you can view it if you log in</a>
+<br/><br/>
+{% endif %}
+
+{% if not session.logged_in %}
+<a href="{{ url_for("login" , condition=1) }}" class="w3-button w3-large w3-blue">you can view it if you log in</a>
+{% endif %}
+
+<p>you can only view part of the content if not log in</p>
 {% endblock %}

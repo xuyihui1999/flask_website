@@ -25,7 +25,7 @@
             {% for x in publications %}
             <tr>
                 <td>{{ x.year }}</td>
-                <td><a href="{{ x.link }}">{{ x.title }}</a></td>
+                <td><a class = "table_body" href="{{ x.link }}">{{ x.title }}</a></td>
                 <td>{{ x.citation }}</td>
             </tr>
             {% endfor %}

@@ -20,6 +20,18 @@
 
 <style>
 
+a.table_body{  
+    color: rgb(79, 156, 34);
+}
+
+a.table_body:hover{  
+    color: rgb(38, 100, 2);
+}
+
+a.table_body:visited{  
+    color: rgb(34, 92, 0);
+}
+
 #wrapper{
   width: 1400px;
   margin: 0 auto;
@@ -300,7 +312,7 @@ mark { background-color:#fff; color:black; }
             
             <li><a href="{{ url_for("research_team") }}" class="">Research Team</a></li>
             <li><a href="{{ url_for("roc_member") }}" class="">ROC members</a></li>
-            
+            <li><a href="{{ url_for("management_team") }}" class="">Management Team</a></li>
             
           </ul>
         </div>
@@ -375,11 +387,11 @@ mark { background-color:#fff; color:black; }
     <li style = "float:right;"><a class = "menu-link" href="{{ url_for("login") }}" class="w3-right "><b>Log In</b></a></li>
     
       {% endif %}
-
+<!--
       <div class="vertical-line w3-dropdown-hover w3-right"> </div>
 
       <li style = "float:right;"><a class = "menu-link" href="{{ url_for("sign_up") }}" class="w3-right "><b>Sign Up</b></a></li>
-    
+-->    
     </ul>
     </div> <!--row-->
 

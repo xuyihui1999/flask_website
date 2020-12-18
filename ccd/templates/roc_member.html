@@ -31,12 +31,12 @@
             {% for x in roc_mem %}
             <tr>
                 <td>{{ x.id }}</td>
-                <td><a href = "{{x.web_link}}">{{ x.name }}</a></td>
+                <td><a class = "table_body" href = "{{x.web_link}}" >{{ x.name }}</a></td>
                 
                 <td>{{ x.title }}</td>
                 
                 <td>{{ x.affiliation}}</td>
-                <td> <a href="mailto:{{ x.email}}">{{ x.email}}</a></td>
+                <td> <a class = "table_body" href="mailto:{{ x.email}}">{{ x.email}}</a></td>
                 
                 
                 

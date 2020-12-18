@@ -131,11 +131,15 @@ def roc_add():
 # Login / Logout ---------------------------------------------------------------
 
 @app.route('/login',methods=['GET','POST'])
-def login():
+@app.route('/login/<condition>',methods=['GET','POST'])
+def login(condition = 1000):
    form = LoginForm()
+   
    if form.validate_on_submit():
-        session['logged_in'] = True
-        return redirect(url_for('main'))
+      if condition == 1:
+        return redirect(url_for('data_archive_portal'))
+      session['logged_in'] = True
+      return redirect(url_for('main'))
    return render_template('login.html',form=form)
 
 
@@ -315,6 +319,12 @@ def cost_subcategory_delete():
             return redirect(url_for('cost_subcategories'))
     return render_template('cost_subcategory_delete.html',cost_subcategories=cost_subcategories)
 
+# Activities ------------------------------------------------------------------   
+@app.route('/data_archive_portal',methods=['GET','POST'])
+def data_archive_portal():
+   return render_template('data_archive_portal.html')
+
+
 # Activities ------------------------------------------------------------------
 @app.route('/Progress',methods=['GET','POST'])
 def Progress():
@@ -488,6 +498,11 @@ def collab():
 def roc_member():
    roc_mem = ROC_members.query.all()
    return render_template('roc_member.html',roc_mem=roc_mem)
+
+@app.route('/management_team',methods=['GET','POST'])
+def management_team():
+   
+   return render_template('management_team.html')
 
 @app.route('/research_team',methods=['GET','POST'])
 def research_team():
