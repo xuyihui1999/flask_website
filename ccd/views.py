@@ -132,11 +132,12 @@ def roc_add():
 
 @app.route('/login',methods=['GET','POST'])
 @app.route('/login/<condition>',methods=['GET','POST'])
-def login(condition = 1000):
+def login(condition = 100):
    form = LoginForm()
    
    if form.validate_on_submit():
-      if condition == 1:
+      if condition == '1':
+        session['logged_in'] = True
         return redirect(url_for('data_archive_portal'))
       session['logged_in'] = True
       return redirect(url_for('main'))
