@@ -16,6 +16,9 @@ from wtforms.fields import simple, core
 USERNAME = 'admin'
 PASSWORD = 'aafcCCD'
 
+DATA_ARCHIVE_USERNAME = 'daadmin'
+DATA_ARCHIVE_PASSWORD = 'daaafcCCD'
+
 # Forms -----------------------------------------------------------------------
 
 class BudgetAddForm(FlaskForm):
@@ -90,6 +93,22 @@ class LinkAddForm(FlaskForm):
   description = TextField("Description")
   link = TextField("Link")
   submit = SubmitField("Save")
+
+class DataArchiveLoginForm(FlaskForm):
+  #change login title
+    username = TextField("Data Archive Username", validators=[DataRequired()])
+
+    password = PasswordField("Data Archive Password", validators=[DataRequired()])
+    
+    submit = SubmitField("Login")
+    #the name after validate_ should equal to field variable above!
+    def validate_username(self, field):
+        if field.data != DATA_ARCHIVE_USERNAME:
+            raise ValidationError("Invalid username")
+
+    def validate_password(self, field):
+        if field.data != DATA_ARCHIVE_PASSWORD:
+            raise ValidationError("Invalid password")
 
 
 class LoginForm(FlaskForm):

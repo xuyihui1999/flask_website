@@ -132,17 +132,22 @@ def roc_add():
 
 @app.route('/login',methods=['GET','POST'])
 @app.route('/login/<condition>',methods=['GET','POST'])
-def login(condition = 100):
+def login(condition = 10000):
    form = LoginForm()
-   
    if form.validate_on_submit():
-      if condition == '1':
-        session['logged_in'] = True
-        return redirect(url_for('data_archive_portal'))
       session['logged_in'] = True
       return redirect(url_for('main'))
    return render_template('login.html',form=form)
 
+@app.route('/Data_Archive_Login',methods=['GET','POST'])
+def data_archive_login():
+   form = DataArchiveLoginForm()
+   
+   if form.validate_on_submit():
+      session['Data_Archive_logged_in'] = True
+      
+      return redirect(url_for('data_archive_portal'))
+   return render_template('data_archive_login.html',form=form)
 
 @app.route('/logout')
 def logout():
