@@ -134,6 +134,9 @@ def roc_add():
 @app.route('/login/<condition>',methods=['GET','POST'])
 def login(condition = 10000):
    form = LoginForm()
+   if request.method == 'POST':
+        if form.cancel.data:  # if cancel button is clicked
+            return redirect(url_for('main'))
    if form.validate_on_submit():
       session['logged_in'] = True
       return redirect(url_for('main'))
@@ -142,11 +145,15 @@ def login(condition = 10000):
 @app.route('/Data_Archive_Login',methods=['GET','POST'])
 def data_archive_login():
    form = DataArchiveLoginForm()
-   
+   if request.method == 'POST':
+        if form.cancel.data:  # if cancel button is clicked
+            return redirect(url_for('data_archive'))
+
    if form.validate_on_submit():
       session['Data_Archive_logged_in'] = True
-      
       return redirect(url_for('data_archive_portal'))
+   
+      
    return render_template('data_archive_login.html',form=form)
 
 @app.route('/logout')

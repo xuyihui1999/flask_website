@@ -101,6 +101,7 @@ class DataArchiveLoginForm(FlaskForm):
     password = PasswordField("Data Archive Password", validators=[DataRequired()])
     
     submit = SubmitField("Login")
+    cancel = SubmitField("Cancel")
     #the name after validate_ should equal to field variable above!
     def validate_username(self, field):
         if field.data != DATA_ARCHIVE_USERNAME:
@@ -116,9 +117,9 @@ class LoginForm(FlaskForm):
     username = TextField("Username")
 
     password = PasswordField("Password")
-    remember_me = BooleanField("Remember me")
+    
     submit = SubmitField("Login")
-
+    cancel = SubmitField("Cancel")
     def validate_username(self, field):
         if field.data != USERNAME:
             raise ValidationError("Invalid username")

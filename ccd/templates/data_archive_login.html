@@ -1,7 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
+<style>
+dt.two-button {
+  float: left; 
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin: 0
+}
 
+</style>
 <div class="w3-card-4" style="max-width:50%; margin:auto">
 
   <header class="w3-container w3-center">
@@ -11,10 +19,6 @@
 
   <div class="w3-container w3-white">
     {% if form.errors %}<p class=error>Invalid username or password.{% endif %}
-
-        {% if form.errors %}
-{{ form.errors }}
-{% endif %}
 
     <form method="post">
     {{ form.hidden_tag() }}
@@ -26,7 +30,8 @@
          
         <br/>
         <br/>
-        <dt>{{ form.submit }}
+        <dt class = "two-button">{{ form.submit }}  
+        <dt class = "two-button">{{ form.cancel }} 
       </dl>
     </form>
   </div>
