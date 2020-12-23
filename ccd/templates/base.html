@@ -253,10 +253,10 @@ mark { background-color:#fff; color:black; }
   
   
   function heightfun(){
-    var UpperBodyHeight = document.getElementById('page-container').offsetHeight;
-    var UpperBody = document.getElementsByClassName("page-container")[0];
+    var UpperBodyHeight = document.getElementById('wrapper').offsetHeight;
+    var UpperBody = document.getElementsByClassName("wrapper")[0];
     var FooterHeight = document.getElementById('fot').offsetHeight;
-    var heightNeeded = 　UpperBodyHeight * 0.8 + FooterHeight ;
+    var heightNeeded = 　UpperBodyHeight * 0.8 + FooterHeight*0.8 ;
     console.log("height:  "+ FooterHeight +"px");
     document.getElementById('page-container').style.height = heightNeeded +'px';
 　　} 
@@ -269,7 +269,7 @@ mark { background-color:#fff; color:black; }
 
 <!-- Navbar (sit on top) -->
 
-<div id="page-container" style = "padding-bottom: 120px;   transform: scale(0.8); transform-origin: 50% 0;">
+<div id="page-container" style = "padding-bottom: 85px;   transform: scale(0.8); transform-origin: 50% 0;">
 
 <div >
   <!--<div class="w3-bar" style = "box-shadow: 0 2px 1px 3px  rgb(198, 244, 255);">-->
@@ -424,11 +424,12 @@ mark { background-color:#fff; color:black; }
 </div>
 
 
-<div   style = " transform: scale(0.8); " >   
+<div   style = " transform: scale(0.8); transform-origin: center bottom;" >   
       <footer class="text-center" id ="ft">
             <div class="container-fluid gradient">
-                <div id ="fot" class="container footer"  style="background: linear-gradient(88deg, rgb(253, 255, 253),  rgb(163, 255, 149)); padding-top: 10px; padding-bottom: 0px;" >
-                    <div>
+                <!--<div id ="fot" class="container footer"  style="background: linear-gradient(88deg, rgb(253, 255, 253),  rgb(163, 255, 149)); padding-top: 10px; padding-bottom: 0px;" >-->
+                  <div id ="fot" class="container footer"  style="background-color: #d1ebc7; padding-top: 10px; padding-bottom: 0px;" >
+                  <div>
                         <a href="http://intranet.agr.gc.ca/agrisource/eng?id=1287261736402" target="_blank" >
                             <img alt="AAFC" class="aafc-logo" style="height:35px;width:430px;position:relative; bottom:10px" src="{{ url_for ('static', filename='images/aafc.png') }}" />
                             
