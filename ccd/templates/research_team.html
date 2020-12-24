@@ -5,7 +5,7 @@
 <script src="{{ url_for('static', filename='js/research_team.js') }}"></script>
 
 
-<h2><Center><b>Research Team</b></Center></h2>
+<h3><Center><b>Research Team</b></Center></h3>
 <br>
 
 {% if session.logged_in %}
@@ -34,8 +34,14 @@
             
             <tr>
                 <td>{{ x.id}}</td>
+                <!--
+                {% if x.website|length < 1 %}
+                <td><a  >{{ x.name}}</a></td>
+                {% else %}
                 <td><a class = "table_body" href = "{{x.website}}" >{{ x.name}}</a></td>
-                
+                {% endif %}
+                -->
+                <td><a class = "table_body" href = "{{x.website}}" >{{ x.name}}</a></td>
                 <td>{{ x.title}}</td>
                 <td>{{ x.role}}</td>
                 <td>{{ x.description_of_responsibilities}}</td>

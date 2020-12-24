@@ -1,5 +1,5 @@
 p {
-    font-size: 18px;
+    font-size: 14.4px;
     text-align: left;
 }
 
@@ -27,7 +27,7 @@ table.center {
 }
 
 th {
-  font-size: 20px;
+  font-size:16px ;
   font-weight: 600px;
   text-align: left;
   padding: 5px;
@@ -35,7 +35,7 @@ th {
 }
 
 td {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600px;
   text-align: left;
   padding: 5px;
@@ -69,22 +69,22 @@ tr:nth-child(even) {
 }
 
 .column33 p, .row p{
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;    
 }
 
 .page-body span {
-   margin-bottom: 20px;
+   margin-bottom: 16px;
 }
 
 .page-body p, .page-body ul, .page-body li{
-  font-size: 20px;
+  font-size: 16px;
 }
 
 span.tier-title{
   background-color:#d5ebcc;
   padding-left: 5px;
-  font-size: 23px;
+  font-size: 18.4px;
   font-weight: 900;
   color: #52783d ;
   display:inline-block;
@@ -94,7 +94,7 @@ span.tier-title{
 
 .t-title{
   background-color: rgb(79, 156, 34); 
-  font-size: 22px;
+  font-size: 17.6px;
   font-weight: 900; 
   color:rgb(255, 255, 255) ;
   margin-top: 60px;
@@ -102,7 +102,7 @@ span.tier-title{
 
 
 .top-tier-title{
-  font-size: 26px;
+  font-size: 20.8px;
   font-weight: 900; 
   display:inline;
   background-color: rgb(248, 250, 133); 
@@ -116,10 +116,8 @@ span.tier-title{
 {
 height: 80%; 
 float:left;
-
-
 position: fixed;
-width:10%;
+width: 10%;
 }
 
 .right-div 
@@ -130,14 +128,14 @@ width:86%;
 }  
 
 li a{
-font-size: 16px;
+font-size: 12.8px;
 
 }
 
 a.table-link{
   text-decoration: underline;
   color: rgb(79, 156, 34);
-  font-size: 16px;
+  font-size: 12.8px;
 }
 
 a.table-column-link{
@@ -212,3 +210,5 @@ video {
   display: block;
   margin: auto;
 }
+
+
