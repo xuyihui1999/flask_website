@@ -507,7 +507,7 @@ def collab():
    collabs = Collaborators.query.all()
    return render_template('collab.html',collabs=collabs)
 
-@app.route('/roc_member',methods=['GET','POST'])
+@app.route('/roc_member',methods=['GET','POST']) 
 def roc_member():
    roc_mem = ROC_members.query.all()
    return render_template('roc_member.html',roc_mem=roc_mem)
@@ -823,15 +823,15 @@ def link_delete():
             return redirect(url_for('links'))
     return render_template('link_delete.html',links=links)
 
-# Conferences -----------------------------------------------------------------
+# presentation -----------------------------------------------------------------
 
-@app.route('/conferences',methods=['GET','POST'])
-def conferences():
+@app.route('/presentations',methods=['GET','POST'])
+def Presentations():
    conferences = Conferences.query.all()
-   return render_template('conferences.html',conferences=conferences)
+   return render_template('presentations.html',conferences=conferences)
 
-@app.route('/conference_add',methods=['GET','POST'])
-def conference_add():
+@app.route('/presentations_add',methods=['GET','POST'])
+def Presentations_add():
     if not session.get('logged_in') :
       return redirect(url_for('login')) #user is not logged in sends user to login screen Kody 2018-01-08
     form = ConferenceAddForm()
@@ -845,11 +845,11 @@ def conference_add():
         if exists is None:
           db.session.add(new)
           db.session.commit()
-          return redirect(url_for('conferences'))
-    return render_template('conference_add.html',form=form)
+          return redirect(url_for('Presentations'))
+    return render_template('presentations_add.html',form=form)
 
-@app.route('/conference_delete',methods=['GET','POST'])
-def conference_delete():
+@app.route('/presentations_delete',methods=['GET','POST'])
+def Presentations_delete():
     if not session.get('logged_in') :
       return redirect(url_for('login')) #user is not logged in sends user to login screen Kody 2018-01-08
     conferences = Conferences.query.all()
@@ -862,8 +862,8 @@ def conference_delete():
         if exists:
             db.session.delete(exists)
             db.session.commit()
-            return redirect(url_for('conferences'))
-    return render_template('conference_delete.html',conferences=conferences)
+            return redirect(url_for('Presentations'))
+    return render_template('presentations_delete.html',conferences=conferences)
 
 # Data Archive --------------------------------------------------------------
 
