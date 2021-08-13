@@ -1,7 +1,0 @@
-$(document).ready(function() {
-    $('#objectives').DataTable( {
-        "scrollX": true,
-        "scrollY": 500,
-	"pageLength": 50,
-    } );
-} );

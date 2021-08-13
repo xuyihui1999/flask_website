@@ -1,8 +1,0 @@
-$(document).ready(function() {
-    $('#links').DataTable( {
-        "scrollX": true,
-        "scrollY": 400,
-	"pageLength": 50,
-    } );
-} );
-

@@ -1,7 +1,0 @@
-$(document).ready(function() {
-    $('#support').DataTable( {
-        "scrollX": true,
-        "scrollY": 400,
-	"pageLength": 50,
-    } );
-} );

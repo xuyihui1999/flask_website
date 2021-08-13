@@ -1,7 +1,0 @@
-$(document).ready(function() {
-    $('#cost_subcategories').DataTable( {
-        "scrollX": true,
-        "scrollY": 300,
-	"pageLength": 50,
-    } );
-} );
