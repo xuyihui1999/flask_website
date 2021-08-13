@@ -1,0 +1,6 @@
+$(document).ready(function() {
+    $('#rdc').DataTable( {
+	"pageLength": 50,
+	
+	});
+} );

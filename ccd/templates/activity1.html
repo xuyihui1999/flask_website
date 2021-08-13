@@ -1,0 +1,250 @@
+{% extends "activity_base.html" %}
+
+
+
+{% block activity1_left %}
+
+<li ><a href="#Activity-1-tier1">Tier 1: High-quality reference assembly</a></li>
+<li ><a href="#Activity-1-tier2">Tier 2: Reference guided assembly</a></li>
+<li ><a href="#Activity-1-tier3">Tier 3: Imputed assembly</a></li>
+ 
+{% endblock %}
+
+
+{% block activity1_right %}
+
+<style>
+  #Genome_size td:nth-child(1) {
+  font-style: italic;
+}
+
+  #two_Sequencing_genome td:nth-child(2) {
+  font-style: italic;
+}
+  </style>
+
+<h3><b>Activity 1: Harnessing the diversity of wheat</b></h3>
+
+<p style = "text-align: center;font-weight: 700;" >Proposed genome sequecning strategy</p>
+<img class = "center-image"style="height:405px;width:860px;" src="{{ url_for ('static', filename='images/activity1_first_image.png') }}" />
+
+<span id = "Activity-1-tier1" class = "tier-title" style="width: 100%;margin-bottom: 20px;">Tier 1: High-quality reference assembly</span>
+<p style = " text-align: left;" >Producing high-quality <i>de novo</i> genome sequences for six novel genomes of <i>Ae. markgrafii</i> (C), <i>Ae. comosa</i> (M), <i>Ae. speltoides</i> (S), <i>Ae. umbellulata</i> (U), <i>Ae. Uniaristata</i> (N),  and <i>Ae. Mutica</i> (T).
+</p>
+<p style = "text-align: center;font-weight: 700;" >Genome size estimates by flow cytometry</p>
+
+<table id="Genome_size" class = "center">
+    <tr>
+      <th>Species</th>
+      <th>Genome</th>
+      <th>1C<sup>1</sup> (Gbp)</th>
+      <th>1C<sup>2</sup> (Gbp)</th>
+    </tr>
+    <tr>
+      <td>Ae. markgrafii</td>
+      <td>C</td>
+      <td>4.84</td>
+      <td>4.3&plusmn;0.013</td>
+    </tr>
+    <tr>
+       <td>Ae. comosa</td>
+       <td>M</td>
+       <td>5.53</td>
+       <td>5.3&plusmn;0.014</td>
+    </tr>
+    <tr>
+      <td>Ae. speltoides</td>
+      <td>S</td>
+      <td>5.81</td>
+      <td>5.5&plusmn;0.005</td>
+    </tr>
+    <tr>
+      <td>Ae. umbellulata</td>
+      <td>U</td>
+      <td>5.38</td>
+      <td>5.1&plusmn;0.014</td>
+    </tr>
+    <tr>
+      <td>Ae. uniaristata</td>
+      <td>N</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Ae. mutica</td>
+      <td>T</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </table>
+  
+<p style = "font-size: 12px; font-weight: 500; padding-left: 130px;" ><sup>1</sup> <a class="table-link" href="https://pubmed.ncbi.nlm.nih.gov/18059548/">Eilam, T., et al., Genome size and genome evolution in diploid Triticeae species. Genome, 2007. 50: 1029-37.</a><br>
+    <a class="table-link" class="table-link"  href="https://cdnsciencepub.com/doi/10.1139/G08-043">Eilam, T., et al., Nuclear DNA amount and genome downsizing in natural and synthetic allopolyploids of the genera Aegilops and Triticum. Genome, 2008. 51: 616-27.</a>
+    <br><sup>2</sup> Our estimates
+  </p>
+
+
+
+<span id = "Activity-1-tier2" class = "tier-title" style="width: 100%;margin-bottom: 20px;">Tier 2: Reference guided assembly</span>
+<p style = " text-align: left;" >Generating mid-coverage assemblies of at least 50 accessions using 30× read-depth of Oxford Nanopore, 10× read-depth of 10X Genomics and 10× read-depth of Illumina short reads technologies (Table 1.2) to enable the identification of single nucleotide variation (SNV), PAV and CNV, and a large proportion of structural variants
+</p>
+<p style = "text-align: center;font-weight: 700;" >Mid-coverage assemblies of at least 50 accessions</p>
+
+<table id = "two_Sequencing_genome" class = "center">
+    <tr>
+      <th>Accesion</th>
+      <th>Species</th>
+      <th>Genome</th>
+      <th>Activity</th>
+      <th>Tissue</th>
+      <th>Seed</th>
+    </tr>
+    <tr>
+      <td>Carberry</td>
+        <td>T. aestivum</td>
+      <td>ABD</td>
+      <td>2.2</td>
+      <td>&radic;</td>
+      <td>&radic;</td>
+    </tr>
+    <tr>
+      <td>Stettler</td>
+      <td>T. aestivum</td>
+      <td>ABD</td>
+      <td>2.2</td>
+      <td>&radic;</td>
+      <td>&radic;</td>
+    </tr>
+    <tr>
+      <td>27 SHWs<sup>1</sup></td>
+      <td>T. aestivum</td>
+      <td>ABD</td>
+      <td>1.1/1.2/2.2</td>
+      <td>&radic;</td>
+      <td>&radic;</td>
+    </tr>
+    <tr>
+      <td>Canthatch</td>
+      <td>T. aestivum</td>
+      <td>ABD</td>
+      <td>3.1</td>
+      <td>&radic;</td>
+      <td>&radic;</td>
+    </tr>
+    <tr>
+      <td>RL5710</td>
+      <td>T. aestivum</td>
+        <td>AB</td>
+        <td>3.1</td>
+        <td>&radic;</td>
+        <td>&radic;</td>
+    </tr>
+    <tr>
+        <td>Stewart 63</td>
+        <td>T. durum</td>
+        <td>AB</td>
+        <td>3.1</td>
+        <td>&radic;</td>
+        <td>&radic;</td>
+    </tr>
+    <tr>
+        <td>DT696<sup>2</sup></td>
+        <td>T. durum</td>
+        <td>AB</td>
+        <td>3.2</td>
+        <td>&radic;</td>
+        <td>&radic;</td>
+    </tr>
+    <tr>
+        <td>D04X.00.003</td>
+        <td>T. durum</td>
+        <td>AB</td>
+        <td>3.2</td>
+        <td>&radic;</td>
+        <td>&radic;</td>
+    </tr>
+    <tr>
+        <td>13 accessions</td>
+        <td>T. turgidum ssp</td>
+        <td>AB</td>
+        <td>1.1</td>
+        <td>&radic;</td>
+        <td>&radic;</td>
+    </tr>
+    <tr>
+        <td>13 accessions</td>
+        <td>Aegilops sp</td>
+        <td>Tetra/Hexa</td>
+        <td>1.1</td>
+        <td>&radic;(9/13)</td>
+        <td>&radic;(9/13)</td>
+    </tr>
+    <tr>
+        <td>22 NAM parents</td>
+        <td>T. aestivum</td>
+        <td>ABD</td>
+        <td>2.2</td>
+        <td>&radic;</td>
+        <td>&radic;</td>
+    </tr>
+  </table>
+  
+  <p style = "font-size: 12px; padding-left: 130px;" ><sup>1</sup> Includes NAM SHW parents
+    <br><sup>2</sup> Replacement for Transcend: Assembly available based on ONT trial
+  </p>
+
+<span id = "Activity-1-tier3" class = "tier-title" style="width: 100%;margin-bottom:20px;">Tier 3: Imputed assembly</span>
+<ul >
+    <li>perform low-coverage sequencing (~1×) of more than 350 accessions using standard Illumina short read sequencing with the aim to define haplotypes and increase the potential to identify rare alleles.</li>
+    <li>350 accessions of diploid, tetraploid and hexaploid from 23 Aegilops species and 4 Triticum species including many subspecies</li>
+        <p style = "text-align: center;font-weight: 700;" >Genetic diversity of 350 accessions</p>
+        <img class = "center-image" style="width: 80%;" src="{{ url_for ('static', filename='images/activity1_tier3_1.png') }}" />
+        <img class = "center-image" style="width: 80%;" src="{{ url_for ('static', filename='images/activity1_tier3_2.png') }}" />
+
+    <li>Selection will be based on genetic diversity, deepening the Aegilops representation and covering the subspecies of <i>T. aestivum</i> and <i>T. turgidum</i></li>
+    <li>Selection of tetraploid species</li>
+        <br>
+        <div class="p-row">
+            <div class="column33" >
+                <p><b>Wild emmer wheat (<i>T. dicoccoides</i>)</b></p>
+            </div>
+            <div class="column33">
+                <p><b>Domesticated emmer wheat (<i>T. dicoccum</i>)</b> </p>
+            </div>
+            <div class="column33">
+                <p><b>Durum wheat landraces (<i>T. durum</i>)</b></p>
+            </div>
+        </div>
+        <div class="p-row">
+            <div class="column33" >
+                <p>
+                186 accessions representing Fertile Crescent region where grow WEW natural populations
+                </p>
+            </div>
+            <div class="column33">
+                <p>
+                139 accessions from 29 countries
+                </p>
+            </div>
+            <div class="column33" >
+                <p>
+                140 accessions from 39 countries
+                </p>
+            </div>
+        </div>
+
+        <div class="p-row">
+            <div class="column33" >
+                <img  style="width:100%" class = "center-image" src="{{ url_for ('static', filename='images/activity1_tier3_map1.png') }}" />
+            </div>
+            <div class="column33">
+                <img style="width:100%" class = "center-image" src="{{ url_for ('static', filename='images/activity1_tier3_map2.png') }}" />
+            </div>
+            <div class="column33" >
+                <img  style="width:100%" class = "center-image" src="{{ url_for ('static', filename='images/activity1_tier3_map3.png') }}" />
+            </div>
+        </div>
+
+</ul>
+
+        {% endblock %}

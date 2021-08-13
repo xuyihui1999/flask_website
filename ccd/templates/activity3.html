@@ -1,0 +1,126 @@
+{% extends "activity_base.html" %}
+
+
+
+{% block activity1_left %}
+
+
+<li ><a href="#Activity3.1">Activity 3.1: Suppression of Leaf Rust Resistance</a></li>
+<li ><a href="#Activity3.2">Activity 3.2: Suppression of Insect Resistance</a></li>
+<li ><a href="#Activity3.3">Activity 3.3: Isolation of a Major Gene for FHB Resistance in a Low Recombination Region</a></li>
+
+{% endblock %}
+
+
+{% block activity1_right %}
+
+<h3><b>Activity 3: Exploring Novel Gene Isolation and Characterization Strategies to Address Linkage Drag, Suppression and Epistasis</b></h3>
+<br>
+
+<span id = "Activity3.1" class = "tier-title" style="width:100%;margin-bottom:20px;" >Activity 3.1: Suppression of Leaf Rust Resistance in Wheat
+</span>
+
+<div class="p-row">
+  <div class="column50" >
+    <ul >
+      <li>Explore the interactions that Mediator subunits facilitate throughout the wheat genome,
+          with a focus on Med15 homologues to identify the gene targets of <i>SuSr-D1</i> and its homeologues
+          to determine how <i>SuSr-D1</i> suppresses stem rust resistance (<i>Sr</i>) genes.
+      </li>
+      <li>Identify mediator proteins involved in suppression of stem rust resistance.</li>
+      <li> Isolate and characterize leaf and stem rust suppressor and suppressed genes.</li>
+
+
+</ul>
+    <hr height="10">
+
+    <p style = "text-align: center;" >
+      <br><br>Thatcher  (<span style="color: #4d86e2"><b>ONT Assembly in place - Pozniak</b></span>)
+    </p>
+    <img class = "center-image"style="width:30%" src="{{ url_for ('static', filename='images/arrow_plus_lr2a.png') }}" />
+    <img class = "center-image"style="width:84%" src="{{ url_for ('static', filename='images/Positive_Epistatic_Interactions.png') }}" />
+  </div>
+
+  <div class="column50" >
+      <br><br>
+      <img style="height:600px; width:500px" class = "center-image" src="{{ url_for ('static', filename='images/Suppression_of_Leaf_Rust_Resistance.png') }}" />
+    <h4>Leaf rust reactions to race BBBD. Stewart 63 and RL6089/ Stewart 63 F<sub>1</sub> show resistant infection types</h4>
+
+    <hr color="green"/>
+
+    <span style="font-size: 16.8px;"><b>Positive Epistatic Interactions in Wheat – Leaf Rust</b></span>
+
+    <ul>
+      <li>The leaf rust resistance gene <i>Lr2a</i> provides excellent resistance when pyramided with
+        <i>Lr34</i>, but almost no resistance in its absence. We will clone <i>Lr2a</i> to facilitate
+        studies to understand the interaction with <i>Lr34</i>.
+      </li>
+      <li>RL6016 is a NIL to Thatcher (+<i>Lr2a</i>). An ONT assembly is available (Dr. Pozniak) from
+        another project. A large F<sub>2</sub> population has been generated for the cross Chinese Spring/RL6016
+          and is now ready for fine mapping. In addition, knock-out mutants of <i>Lr2a</i> are available
+      </li>
+    </ul>
+  </div>
+  
+</div>
+
+<span id = "Activity3.2" class = "tier-title" style="width:100%;margin-bottom:20px;" >
+  Activitity 3.2. Suppression of Insect Resistance
+</span>
+<br>
+<ul>
+   <li>
+The wheat stem sawfly (WSS) (<i>Cephus cinctus</i> Norton) is an insect pest of durum and common wheat
+in the northern Great Plains of North America, affecting both grain quality and yield.
+The most effective control of the WSS is to grow wheat cultivars with solid stems,
+which decreases the survival rate of insect eggs and larvae. A major gene controlling
+the solid-stem phenotype, <i>SSt1</i>, has been identified. We have cloned a candidate gene for
+<i>SSt1</i> in durum and common wheat.
+   </li>
+  <li>
+    Identification of <i>SSt1</i> supressors and associated molecular markers. Once identified,
+      the suppression factor(s) for <i>SSt1</i> can be actively selected against in breeding to
+    increase sawfly resistance in bread wheat. Unification of genomic, transcriptomic,
+    and phenomic data into a systems biology model describing the mechanism of stem
+    solidness and its suppression.
+  </li>
+</ul>
+
+<span id = "Activity3.3" class = "tier-title" style="width:100%;margin-bottom:20px;">
+  Activity 3.3. Isolation of a major gene for FHB resistance in a low recombination region
+</span>
+
+     <ul>
+        <li>
+          The relatively narrow genetic variation for FHB resistance in elite durum wheat
+          germplasm is as a major stumbling block for FHB resistance breeding in durum wheat.
+            We have identified heritable FHB resistance from <i>T. diccoccum</i> accession TG3475151
+          and have localized a major QTL (<i>QFHB-cdc.5A</i>) on chromosome 5A that is
+          highly stable across environments. This QTL appears to be syntenic to a stable QTL
+          identified in cultivated emmer wheat, and is present in a few historical Canadian breeding lines.
+        </li>
+        <li>
+            Improve resolution of <i>QFHB-cdc.5A</i>, identify <i>QFHB-cdc.5A</i> carriers
+          in different genetic backgrounds and breeding materials,
+          and develop robust DNA markers to support marker-assisted breeding.
+        </li>
+      </ul>
+
+<div class="p-row">
+  <div class="column60" >
+    <p style = "text-align: center;"><b>FHB reaction of AC Morse durum wheat (susceptible) and TG3487 (resistant) 20 days after inoculation
+      with 6 isolates of <i>F. graminearum</i>.  Control spikes were inoculated with water</b></p>
+    <img style="width:40%; padding-top: 37px;" class = "center-image" src="{{ url_for ('static', filename='images/Wild_Alleles1.png') }}"/>
+  </div>
+  
+</div>
+<br><br>
+<div class="p-row">
+  <div class="column60" >
+    <p style = "text-align: center;"><b>Strategy for gene mapping using a bi-parental and radiation hybrid (RH) mapping populations</b></p>
+      <img style="width:60%" class = "center-image" src="{{ url_for ('static', filename='images/Wild_Alleles2.png') }}" />
+  </div>
+  
+</div>
+
+        {% endblock %}

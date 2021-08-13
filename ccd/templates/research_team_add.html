@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="w3-card-4" style="max-width:50%; margin:auto">
+
+  <header class="w3-container w3-center">
+    
+    <h3><Center><b>Add Research Team</b></Center></h3>
+  </header>
+
+  <div class="w3-container w3-white">
+    <form action="{{ url_for('research_team_add') }}" method="post" class="w3-container">
+        {{ form.hidden_tag() }}
+        <dl>
+            <dt>{{ form.id.label }}:
+            <dt>{{ form.id }}
+            <dt>{{ form.name.label }}:
+            <dt>{{ form.name }}
+            
+            <dt>{{ form.title.label }}:
+            <dt>{{ form.title }}
+            <dt>{{ form.role.label }}:
+            <dt>{{ form.role }}
+            <dt>{{ form.description_of_responsibilities.label }}:
+            <dt>{{ form.description_of_responsibilities }}
+            <dt>{{ form.affiliation.label }}:
+            <dt>{{ form.affiliation }}
+            <dt>{{ form.email.label }}:
+            <dt>{{ form.email }}
+            <dt>{{ form.website.label }}:
+            <dt>{{ form.website }}
+            <br/><br/>
+            <dt>{{ form.submit }}
+        </dl>
+    </form>
+  </div>
+
+</div>
+
+{% endblock %}

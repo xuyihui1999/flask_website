@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    .column {
+      float: left;
+      width: 16.6666%;
+      padding-right: 25px;
+    }
+    .p1{
+        text-align: center;
+        font-family:arial;
+        font-size:16px;
+        font-weight: bold;
+        
+    }
+
+    .p2{
+        text-align: center;
+        font-family:arial;
+        font-size:20px;
+        font-weight: bold;
+        color:#1e6120;
+        padding-bottom: 20px;
+    }
+
+    a:link {
+    text-decoration: none;
+    }
+
+    a p:hover {
+  color: rgb(108, 192, 93);
+}
+
+    img:hover{
+    
+    transform: scale(1.1); 
+    }
+    </style>
+
+    
+
+<div class="w3-container w3-white" style = "padding-top: 100px;">
+<body >
+    <div class="column">
+        <a href="{{ url_for("main") }}"><p id="homeheader" class = "p2">GENETIC RESOURCES
+        </p></a>    
+        
+      </div>
+      <div class="column">
+        <a href="{{ url_for("activity1") }}"><p class = "p2">HARNESSING DIVERSITY</p></a>
+        
+      </div>
+      <div class="column">
+        <a href="{{ url_for("activity2") }}"><p class = "p2">ADVANCING DOMESTICATION</p></a>
+        
+      </div>
+
+      <div class="column">
+        <a href="{{ url_for("activity3") }}"><p class = "p2">ENABLING DISCOVERY
+        </p></a>  
+        
+      </div>
+      <div class="column">
+        <a href="{{ url_for("activity4") }}"><p class = "p2">EXPEDITING DELIVERY
+        </p></a>  
+        
+      </div>
+      <div class="column">
+        <a href="{{ url_for("activity5") }}"><p class = "p2">VALUATING DIVERSITY
+        </p></a>  
+        
+      </div>
+
+
+
+    
+        <div class="column">
+            <a href="{{ url_for("main") }}">
+                <img alt="4dwheat_logo" src="{{url_for('static',filename='images/genetic_resources.png')}}" style="width:100%"/>
+            </a> 
+          
+        </div>
+        <div class="column">
+            <a href="{{ url_for("activity1") }}">
+                <img alt="4dwheat_logo" src="{{url_for('static',filename='images/harnessing_diversity.png')}}" style="width:100%"/>
+            </a> 
+          
+        </div>
+        <div class="column">
+            <a href="{{ url_for("activity2") }}">
+                <img alt="4dwheat_logo" src="{{url_for('static',filename='images/advancing_domestication.png')}}" style="width:100%"/>
+            </a> 
+          
+        </div>
+
+        <div class="column">
+            <a href="{{ url_for("activity3") }}">
+                <img alt="4dwheat_logo" src="{{url_for('static',filename='images/enabling_discovery.png')}}" style="width:100%"/>
+            </a> 
+          
+        </div>
+        <div class="column">
+            <a href="{{ url_for("activity4") }}">
+                <img alt="4dwheat_logo" src="{{url_for('static',filename='images/expediting_delivery.png')}}" style="width:100%"/>
+            </a> 
+          
+        </div>
+        <div class="column">
+            <a href="{{ url_for("activity5") }}">
+                <img alt="4dwheat_logo" src="{{url_for('static',filename='images/valuating_diversity.png')}}" style="width:100%"/>
+            </a> 
+          
+        </div>
+
+      
+</body>
+</div>
+
+
+
+
+<div class="w3-container w3-white" style = "padding-bottom: 100px;">
+    <body>
+        
+            <div class="column">
+                
+              <p class = "p1">Wild Relatives, Synthetics NAM Population</p>
+            </div>
+            <div class="column">
+                
+              <p class = "p1">Genome Sequences Annotation, Chromosome Interactions</p>
+            </div>
+            <div class="column">
+                
+              <p class = "p1">CRISPR-CAS9, Combining Ability, D Genome Variation</p>
+            </div>
+    
+            <div class="column">
+                
+              <p class = "p1">Gene Isolation, Gene Suppression, Epistatic Interactions
+                </p>
+            </div>
+            <div class="column">
+                
+              <p class = "p1">Precision Phenotype, Physiological/Disease Application
+                </p>
+            </div>
+            <div class="column">
+                
+              <p class = "p1">Global Access, Utilization Policies 
+                </p>
+            </div>
+          
+    </body>
+    </div>
+{% endblock %}

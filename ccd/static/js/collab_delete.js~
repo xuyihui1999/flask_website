@@ -1,0 +1,17 @@
+// Delete function
+$(function() {
+
+    $('#saveDelete').click(function() {
+        $.ajax({
+            url: '/collab',
+            data: $('form').serialize(),
+            type: 'POST',
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    });
+});

@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="w3-card-4" style="max-width:50%; margin:auto">
+
+  <header class="w3-container w3-center">
+    
+    <h3><Center><b>Sign Up</b></Center></h3>
+  </header>
+
+  <div class="w3-container w3-white">
+
+    <!--
+    {% if form.errors %}<p class=error>Invalid username or password.{% endif %}
+    
+
+    {% for field in form if (field.widget.input_type !='hidden') and (field.label != Summit) %}
+    <p>{{field.label}}
+      <br>
+      {{field}}
+      <span>
+        {% if field.errors %}
+          {% for error in field.errors %}
+            {{error}}
+          {% endfor%}
+        {% endif%}
+      </span>
+    </p>
+    {% endfor%}
+</span>
+
+
+
+{% if form.errors %}<p class=error>Invalid username or password.{% endif %}
+ --> 
+  {% if form.errors %}
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <p style = "color:red" class=error>{{message}}
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+  
+  {% endif %}
+
+    <form method="post">
+    {{ form.hidden_tag() }}
+      <dl>
+        <dt>{{ form.email.label }}:
+        <dt>{{ form.email }}
+        <dt>{{ form.username.label }}:
+        <dt>{{ form.username }}
+        <dt>{{ form.password.label }}:
+        <dt>{{ form.password }}
+        <dt>{{ form.ReEnterPassword.label }}:
+        <dt>{{ form.ReEnterPassword }}
+        <br/>
+        <br/>
+        <dt>{{ form.submit }}
+      </dl>
+    </form>
+  </div>
+
+</div> 
+
+
+{% endblock %}

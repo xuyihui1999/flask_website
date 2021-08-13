@@ -1,0 +1,238 @@
+{% extends "activity_base.html" %}
+
+{% block activity1_left %}
+
+<li ><a href="#Activity4.1">Activity 4.1. Integrating Digital Phenotyping with Genomic-enabled Prediction</a></li>
+<li ><a href="#Activity4.2">Activity 4.2. Characterizing FHB Infection using HTP and Deep Learning</a></li>
+</a></li>
+{% endblock %}
+
+
+{% block activity1_right %}
+
+
+<h3><b>Activity 4: Delivery of Pre-breeding Germplasm to Wheat Breeding</b></h3>
+<br>
+
+<span id = "Activity4.1" class = "tier-title" >Activity 4.1. Integrating Digital Phenotyping with Genomic-enabled Prediction
+</span>
+
+<ul>
+  <li>
+    Phenotyping in breeding programs is evolving away from the concept of direct measurement of target traits
+    and moving towards the digital inference of productivity using multi-faceted approaches.
+    In particular, physiological high throughput phenotyping (HTP) measurements can predict grain yield,
+    which may be particularly useful in early generation pre-breeding programs.
+    We propose a novel application where digital phenotypes of our NAM population will be treated solely
+    as empirical data in a machine learning-based genomic prediction approach.
+    We will apply digital phenotyping using multispectral information to the SHW-derived NAM population
+    that will act as a GS training population using the dense genotyping data generated in Activity 2.2.
+  </li>
+  <li>
+    Establish and validate standardized methodologies for HTP in wheat that can be later applied to breeding programs
+    and cultivar assessments in registration trials
+  </li>
+</ul>
+
+<p><b>CanNAM Population</b></p>
+
+<div class="p-row">
+  <div class="column33" >
+    <p style = "padding-top: 68px; text-align: center;">Canadian Spring Hexaploid Wheat (CanNAM)</p>
+    
+    <p style = "padding-top: 24px; text-align: center;"><b>Stettler ONT Assembly:<br>
+      Data generated
+      </b></p>
+          
+    </div>
+    <div class="column25" >
+      <img style="width:100%; padding-bottom: 0px;" class = "center-image" src="{{ url_for ('static', filename='images/Activity4_Intergrating1.png') }}" /> 
+      <p style = "text-align: center;">50 (Pops) X 94 RILS / per Pop
+        = 4700 RILs
+       </p>
+    </div>
+
+    <div class="column33" >
+      <img style="width:80%" class = "center-image" src="{{ url_for ('static', filename='images/Activity4_Intergrating2.png') }}" /> 
+      
+    </div>
+  
+  </div>
+
+
+<p style="text-align: center;"><b>Completed and ongoing phenotyping of the spring and winter diversity panels </b></p>
+<table class = "center" >
+  <tr>
+    <th>Trait</th>
+    <th>Trial Location</th>
+    <th>Status</th>  
+  </tr>
+
+  <tr>
+    <td>Early season ground cover
+    </td>
+    <td>Kernen, Innovation, Goodale
+    </td>
+    <td>Completed
+    </td>
+  </tr>
+  <tr>
+    <td>Heading date
+    </td>
+    <td>Kernen, Innovation, Goodale
+    </td>
+    <td>Completed
+    </td>
+  </tr>
+  <tr>
+    <td>Glaucousness
+    </td>
+    <td>Kernen, Innovation, Goodale
+    </td>
+    <td>Completed
+    </td>
+  </tr>
+  <tr>
+    <td>Awn presence
+    </td>
+    <td>Kernen, Innovation, Goodale
+    </td>
+    <td>Completed
+    </td>
+  </tr>
+  <tr>
+    <td>Anther extrusion
+    </td>
+    <td>Goodale
+    </td>
+    <td>Completed
+    </td>
+  </tr>
+  <tr>
+    <td>Lodging
+    </td>
+    <td>Kernen, Innovation, Goodale
+    </td>
+    <td>Completed
+    </td>
+  </tr>
+  <tr>
+    <td>Plant height
+    </td>
+    <td>Kernen, Innovation, Goodale
+    </td>
+    <td>Completed
+    </td>
+  </tr>
+  <tr>
+    <td>Canopy temperature during grain fill
+    </td>
+    <td>Kernen, Innovation, Goodale
+    </td>
+    <td>Completed
+    </td>
+  </tr>
+  <tr>
+    <td>Resistance to Leaf Spots
+    </td>
+    <td>Kernen, Innovation, Goodale
+    </td>
+    <td>Completed
+    </td>
+  </tr>
+
+  <tr>
+    <td>Resistance to FHB
+    </td>
+    <td>Saskatoon
+    </td>
+    <td>Completed, but variable data
+    </td>
+  </tr>
+  
+  <tr>
+    <td>Maturity date
+    </td>
+    <td>Kernen, Innovation, Goodale
+    </td>
+    <td>Completed
+    </td>
+  </tr>
+
+  <tr>
+    <td>Yield
+    </td>
+    <td>Kernen, Innovation, Goodale
+    </td>
+    <td>60% Completed
+    </td>
+  </tr>
+</table>
+
+<br><br>
+<h3><center><b>“Digital” Phenotyping of the NAM Population (Three Environments)</b></center></h3>
+<h4><center><b>All locations were scanned at one week intervals (3 day intervals at heading)</b></h4>
+<div class="p-row">
+  <div class="column20" style = "padding-top: 16px;" >
+    <p style = "text-align: center;"><b>PhaseOne<br>
+      RGB camera
+      </b></p>
+    </div>
+    <div class="column80" >
+      <img style="width:80%" class = "center-image" src="{{ url_for ('static', filename='images/Digital_Phenotyping1.png') }}" />
+    </div>
+  </div>
+
+  <div class="p-row">
+    <div class="column20" style = "padding-top: 16px;" >
+      <p style = "text-align: center;"><b>MicaSense Rededge 3<br>
+        Multispectral sensor
+        </b></p>
+      </div>
+      <div class="column80" >
+        <img style="width:80%" class = "center-image" src="{{ url_for ('static', filename='images/Digital_Phenotyping2.png') }}" />
+      </div>
+    </div>
+
+
+
+<br><br>
+<span id = "Activity4.2" class = "tier-title" >Activity 4.2. Characterizing FHB Infection using HTP and Deep Learning</span>
+<br><br>
+<ul>
+  <li>FHB incidence and severity will be evaluated in FHB nurseries located in Morden (Manitoba) and near Saskatoon (Saskatchewan). </li>
+  <li>HTP methodologies in wheat for disease evaluation, with particular emphasis on FHB, rusts and powdery mildew</li>
+</ul>
+
+<h3><center><b>Germplasm field evaluation (FHB Nursery, Morden, MB)</b></center></h3>
+<div class="p-row">
+      <div class="column50" style = "padding-top: 16px;" >
+        <p style = "text-align: center;">Spring Diversity Panel
+        </p>
+      </div>
+
+      <div class="column50" style = "padding-top: 16px;" >
+        <p style = "text-align: center;">Winter Dive Panel
+        </p>
+      </div>     
+    </div>
+
+    <div class="p-row">
+      <div class="column50" style = "padding-top: 16px;" >
+        <img style="width:85%" class = "center-image" src="{{ url_for ('static', filename='images/GERMPLASM_FIELD_EVALUATIONS1.png') }}" />
+      </div>
+
+      <div class="column50" style = "padding-top: 16px;" >
+        <img style="width:95.65%" class = "center-image" src="{{ url_for ('static', filename='images/GERMPLASM_FIELD_EVALUATIONS2.png') }}" />
+      </div>     
+    </div>
+
+    
+    <video width="640" height="360" controls>
+      <source src="{{ url_for ('static', filename='video/field_video1.mp4') }}" type="video/mp4">
+        <source src="{{ url_for ('static', filename='video/field_video1.mp4') }}" type="video/mp3">
+      Your browser does not support the video tag.
+    </video>
+    
+
+        {% endblock %}

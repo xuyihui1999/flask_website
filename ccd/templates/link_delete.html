@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+<script src="{{ url_for('static', filename='js/link_delete.js') }}"></script>
+
+<div class="w3-card-4" style="max-width:50%; margin:auto">
+
+  <header class="w3-container w3-center">
+    
+  <h3><Center><b>Delete Link</b></Center></h3>
+  </header>
+
+  <div class="w3-container w3-white">
+    <form class="w3-container" method="post" action={{ url_for('link_delete') }}>
+      <select name="deleteID" class="w3-block w3-section">
+        {% for x in links %}
+        <option value="{{ x.id }}">{{ x.software }}</option>
+        {% endfor %}
+      </select>
+      <br/>
+      <button class="button" type="submit" id="saveDelete">Delete</button>
+    </form>
+    <br/>
+  </div>
+</div>
+
+{% endblock %}
