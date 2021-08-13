@@ -14,10 +14,10 @@ from wtforms.fields import simple, core
 # Setup -----------------------------------------------------------------------
 
 USERNAME = 'admin'
-PASSWORD = 'aafcCCD'
+PASSWORD = '4dwheatdb'
 
-DATA_ARCHIVE_USERNAME = 'daadmin'
-DATA_ARCHIVE_PASSWORD = 'daaafcCCD'
+DATA_ARCHIVE_USERNAME = 'admin'
+DATA_ARCHIVE_PASSWORD = '4dwheat!'
 
 # Forms -----------------------------------------------------------------------
 
